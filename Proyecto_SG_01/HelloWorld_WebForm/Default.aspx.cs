@@ -16,7 +16,7 @@ namespace HelloWorld_WebForm
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string nombre = entradaTexto.Text;
+            string nombre = TextBox1.Text;
             if (String.IsNullOrEmpty(nombre))
             {
                 lblError.Text = "Debes introducir un nombre de usuario";
