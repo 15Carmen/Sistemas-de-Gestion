@@ -1,0 +1,6 @@
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\obj\Debug\Biblioteca.csproj.AssemblyReference.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\obj\Debug\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Proyecto_SG_01\Biblioteca\obj\Debug\Biblioteca.pdb

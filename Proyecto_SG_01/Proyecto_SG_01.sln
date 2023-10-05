@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld_WebForm", "HelloWorld_WebForm\HelloWorld_WebForm.csproj", "{90805952-5D14-4ADB-81BA-34D8C52BAD9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Biblioteca", "Biblioteca\Biblioteca.csproj", "{5C17A4BE-DE8D-43DF-84AB-93FE1A873C1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90805952-5D14-4ADB-81BA-34D8C52BAD9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90805952-5D14-4ADB-81BA-34D8C52BAD9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90805952-5D14-4ADB-81BA-34D8C52BAD9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90805952-5D14-4ADB-81BA-34D8C52BAD9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C17A4BE-DE8D-43DF-84AB-93FE1A873C1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C17A4BE-DE8D-43DF-84AB-93FE1A873C1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C17A4BE-DE8D-43DF-84AB-93FE1A873C1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C17A4BE-DE8D-43DF-84AB-93FE1A873C1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA66E16D-E6CE-49D1-8424-26B3D57AF2FA}
+	EndGlobalSection
+EndGlobal
