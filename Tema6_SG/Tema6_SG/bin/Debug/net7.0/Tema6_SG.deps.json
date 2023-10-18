@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Tema6_SG/1.0.0": {
+        "runtime": {
+          "Tema6_SG.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tema6_SG/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
