@@ -28,3 +28,33 @@ C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\r
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.pdb
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.genruntimeconfig.cache
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\ref\Tema6_SG.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\appsettings.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.staticwebassets.runtime.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.exe
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.deps.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.runtimeconfig.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\bin\Debug\net7.0\Tema6_SG.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.AssemblyInfoInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.AssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.csproj.CoreCompileInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.RazorAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.RazorAssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets\msbuild.Tema6_SG.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets\msbuild.build.Tema6_SG.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Tema6_SG.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Tema6_SG.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\scopedcss\bundle\Tema6_SG.styles.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\scopedcss\projectbundle\Tema6_SG.bundle.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\refint\Tema6_SG.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\Tema6_SG.genruntimeconfig.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema6_SG\Tema6_SG\obj\Debug\net7.0\ref\Tema6_SG.dll
