@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    DateTime time = DateTime.Now;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hola son las @time.Hour:@time.Minute del @time.ToLongDateString()</h1>
+
+    @if(DateTime.Now.Hour >=12){
+
+        <p>Es después de las 12 del mediodía</p>
+
+    }else{
+
+    <p>Es antes de las 12 del mediodía</p>
+
+    }
+</div>

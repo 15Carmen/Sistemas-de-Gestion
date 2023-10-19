@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+
+<style>
+    table, th, td {
+        border: 1px solid white;
+        border-collapse: collapse;
+    }
+
+    th, td {
+            background-color: #f4bfdb;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Tablas de multiplicar</h1>
+
+    <table style="width:100%">
+
+        @for (int i = 1; i <= 12; i++)
+        {
+            <tr>
+                
+                @for(int j=1; j<=10;j++)
+                {
+                    <td>
+                        <p> @i*@j=@(i*j) </p>
+                        
+                    </td>
+                 }
+                    
+            </tr>
+           
+        }
+
+    </table>
+
+   
+</div>
+}

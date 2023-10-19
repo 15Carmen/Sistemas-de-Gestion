@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cmnbo\\.nuget\\packages\\": {},
+    "C:\\Users\\cmartin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema6_SG\\Tema6_SG\\Tema6_SG.csproj",
-      "projectName": "Tema6_SG",
-      "projectPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema6_SG\\Tema6_SG\\Tema6_SG.csproj",
-      "packagesPath": "C:\\Users\\cmnbo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema6_SG\\Tema6_SG\\obj\\",
+      "projectUniqueName": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema6_SG\\Tema6_SG\\Ejercicios1y2.csproj",
+      "projectName": "Ejercicios1y2",
+      "projectPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema6_SG\\Tema6_SG\\Ejercicios1y2.csproj",
+      "packagesPath": "C:\\Users\\cmartin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema6_SG\\Tema6_SG\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cmnbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cmartin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,6 +33,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
