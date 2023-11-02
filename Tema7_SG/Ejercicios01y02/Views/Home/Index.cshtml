@@ -1,0 +1,22 @@
+﻿@model Ejercicios01y02.Models.Entidades.clsPersona
+
+@{
+    ViewData["Title"] = "Home Page";
+    DateTime horaActual = DateTime.Now;
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <p> @ViewData["Saludo"]</p>
+
+    <p>@ViewBag.horaActual</p>
+
+    <p>Nombre: @Model.Nombre</p>
+    <p>Apellidos: @Model.Apellidos</p>
+
+    @Html.ActionLink("Listado de personas", "listadoPersonas", "Home")
+
+
+</div>

@@ -1,0 +1,35 @@
+﻿
+@model List<Ejercicios01y02.Models.Entidades.clsPersona>
+@using Ejercicios01y02.Models.Entidades
+
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+
+        </tr>
+    </thead>
+
+    
+ @*    @{
+        for (int i = 0; i <= Model.Count; i++)
+        {
+            <tr>
+                <td>@Model[i].Nombre</td>
+                <td>@Model[i].Apellidos</td>
+            </tr>
+        }
+    } *@
+    
+    @foreach (clsPersona persona in Model)
+    {
+        <tr>
+            <td>persona.Nombre</td>
+            <td>persona.Apellidos</td>
+        </tr>
+    }
+
+</table>
