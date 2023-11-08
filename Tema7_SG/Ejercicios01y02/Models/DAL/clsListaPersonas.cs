@@ -2,7 +2,7 @@
 
 namespace Ejercicios01y02.Models.DAL
 {
-    public class ListaPersonas
+    public class clsListaPersonas
     {
 
         /// <summary>
@@ -10,7 +10,7 @@ namespace Ejercicios01y02.Models.DAL
         /// Pre: Ninguna
         /// Post: Ninguna 
         /// </summary>
-        /// <returns>listado personasreturns>
+        /// <returns>listado personas<returns>
         public static List<clsPersona> listadoCompletoPersona()
         {
             List<clsPersona> listadoPersonas = new List<clsPersona>()

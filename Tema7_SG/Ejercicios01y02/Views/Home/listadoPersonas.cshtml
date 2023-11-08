@@ -1,7 +1,5 @@
 ﻿@using Ejercicios01y02.Models.Entidades;
-@model List<Ejercicios01y02.Models.Entidades.clsPersona>
-
-
+@model List<clsPersona>
 
 
 <table>
@@ -13,9 +11,8 @@
         </tr>
     </thead>
 
-    
- @*    @{
-        for (int i = 0; i <= Model.Count; i++)
+   @* @{
+        for (int i = 0; i < Model.Count; i++)
         {
             <tr>
                 <td>@Model[i].Nombre</td>
@@ -24,14 +21,15 @@
         }
     } *@
     
+    
     @foreach (clsPersona persona in Model)
     {
         <tr>
-            <td>persona.Nombre</td>
-            <td>persona.Apellidos</td>
+            <td>@persona.Nombre</td>
+            <td>@persona.Apellidos</td>
         </tr>
     }
-
+    
 </table>
 
 @Html.ActionLink("Volver a Index", "Index")

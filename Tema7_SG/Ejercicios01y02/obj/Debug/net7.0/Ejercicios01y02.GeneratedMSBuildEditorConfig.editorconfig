@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema7_SG\Ejercicios01y02
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/cmartin/GitHub/Sistemas de Gestion/Tema7_SG/Ejercicios01y02/Views/Home/EditarPersonaVista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0YXJQZXJzb25hVmlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/cmartin/GitHub/Sistemas de Gestion/Tema7_SG/Ejercicios01y02/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
