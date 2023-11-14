@@ -1,8 +1,26 @@
-﻿@using Ejercicios01y02.Models.Entidades;
-@model List<Ejercicios01y02.Models.DAL.clsListaDepartamentos>
+﻿@using Ejercicios01y02.Models.ViewModel;
 
-    <label for="nombre">Nombre: </label>
+@model clsListaPersonaConDepartamento;
 
-    
 
-@Html.ActionLink("Volver a Index", "Index")
+<div class="text-center">
+
+    <h1>Agrega una persona</h1>
+
+    <form method="post">
+        <label>Nombre</label>
+        <input type="text" />
+        <select name="Departamento">
+            @*<optgroup>Modelos</optgroup>*@
+            <option>Marketing</option>
+
+
+        </select>
+        @Html.TextBox("Nombre Departamento")
+        @Html.TextBoxFor(model=>model.Persona.Id)
+    </form>
+    <input type="submit" />
+</div>
+@*Enlaces para volver atrás*@
+@Html.ActionLink("Página Principal", "Index", "Home")
+

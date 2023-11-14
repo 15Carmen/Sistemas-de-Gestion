@@ -28,3 +28,33 @@ C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\n
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.pdb
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.genruntimeconfig.cache
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\ref\Ejercicios01y02.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.AssemblyInfoInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.AssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.csproj.CoreCompileInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.RazorAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.RazorAssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\refint\Ejercicios01y02.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\appsettings.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.staticwebassets.runtime.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.exe
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.deps.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.runtimeconfig.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\bin\Debug\net7.0\Ejercicios01y02.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets\msbuild.Ejercicios01y02.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets\msbuild.build.Ejercicios01y02.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ejercicios01y02.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ejercicios01y02.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\scopedcss\bundle\Ejercicios01y02.styles.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\scopedcss\projectbundle\Ejercicios01y02.bundle.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\Ejercicios01y02.genruntimeconfig.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema7_SG\Ejercicios01y02\obj\Debug\net7.0\ref\Ejercicios01y02.dll

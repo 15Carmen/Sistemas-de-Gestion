@@ -47,9 +47,12 @@ namespace Ejercicios01y02.Controllers
             }
         }
 
-        public IActionResult EditarPersona()
+
+        public ActionResult EditarPersonaVista()
         {
-            return View() ;
+            clsListaPersonaConDepartamento viewModel = new clsListaPersonaConDepartamento();
+            return View(viewModel);
         }
+
     }
 }
