@@ -1,7 +1,6 @@
 ﻿using Ejercicios01y02.Models.Entidades;
 using Ejercicios01y02.Models.DAL;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using Ejercicios01y02.Models.ViewModel;
 
 namespace Ejercicios01y02.Controllers
@@ -50,8 +49,14 @@ namespace Ejercicios01y02.Controllers
 
         public ActionResult EditarPersonaVista()
         {
-            clsListaPersonaConDepartamento viewModel = new clsListaPersonaConDepartamento();
-            return View(viewModel);
+            clsPersonaConListaDepartamento objetoEditarVM = new clsPersonaConListaDepartamento();
+            return View(objetoEditarVM);
+        }
+
+        [HttpPost]
+        public IActionResult GuardarPersona(clsPersona persona)
+        {
+            return View();
         }
 
     }

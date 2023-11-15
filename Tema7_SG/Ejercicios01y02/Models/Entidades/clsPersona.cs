@@ -19,12 +19,6 @@
             idDepartamento = 0;
         }
 
-        //Constructor solo con nombre y apellido
-        public clsPersona(String nombre, String apellidos)
-        {
-            this.nombre = nombre;
-            this.apellidos = apellidos;
-        }
 
         //Constructor con nombre, apellido e idDepartamento
         public clsPersona(int id, String nombre, String apellidos, int idDepartamento)

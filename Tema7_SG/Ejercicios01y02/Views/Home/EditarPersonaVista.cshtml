@@ -1,25 +1,52 @@
-﻿@using Ejercicios01y02.Models.ViewModel;
-
-@model clsListaPersonaConDepartamento;
+﻿@using Ejercicios01y02.Models.Entidades;
+@model Ejercicios01y02.Models.ViewModel.clsPersonaConListaDepartamento;
 
 
 <div class="text-center">
 
     <h1>Agrega una persona</h1>
 
-    <form method="post">
-        <label>Nombre</label>
-        <input type="text" />
-        <select name="Departamento">
-            @*<optgroup>Modelos</optgroup>*@
-            <option>Marketing</option>
+    @*
+    @using (Html.BeginForm("GuardarPersona", "Home", FormMethod.Post))
+    *@
 
+    <form asp-action="GuardarPersona">
+
+        <input type="hidden" name="Id" value="@Model.Id" />
+
+
+        <label for="Nombre">Nombre: </label>
+        @Html.TextBoxFor(model=>model.Nombre)
+        <br />
+
+        <label for="Apellidos">Apellidos: </label>
+        @Html.TextBoxFor(model=>model.Apellidos)
+        <br />
+
+        <label for="IdDepartamentos">Departamentos: </label>
+
+        <select name="IdDepartamento">
+
+            @foreach (clsDepartamento departamento in Model.ListaDepartamentos)
+            {
+                @if (Model.IdDepartamento == departamento.IdDepartamento)
+                {
+                    <option selected= value=@departamento.IdDepartamento>@departamento.NombreDepartamento</option>
+                }
+                else
+                {
+                    <option value=@departamento.IdDepartamento>@departamento.NombreDepartamento</option>
+                }
+
+            }
 
         </select>
-        @Html.TextBox("Nombre Departamento")
-        @Html.TextBoxFor(model=>model.Persona.Id)
+
+
+
+        <input type="submit" value="Guardar" />
     </form>
-    <input type="submit" />
+
 </div>
 @*Enlaces para volver atrás*@
 @Html.ActionLink("Página Principal", "Index", "Home")

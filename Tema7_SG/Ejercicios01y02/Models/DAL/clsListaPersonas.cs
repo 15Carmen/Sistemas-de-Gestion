@@ -15,11 +15,11 @@ namespace Ejercicios01y02.Models.DAL
         {
             List<clsPersona> listadoPersonas = new List<clsPersona>()
             {
-                new clsPersona("Carmen", "Martin"),
-                new clsPersona("Luisa", "Alejandra"),
-                new clsPersona("Isabel", "Katharina"),
-                new clsPersona("Paco", "López"),
-                new clsPersona("Lydia", "Pérez")
+                new clsPersona(1, "Carmen", "Martín", 2),
+                new clsPersona(2, "Luisa", "Alejandra", 4),
+                new clsPersona(3, "Isabel", "Katharina", 5),
+                new clsPersona(4, "Paco", "López", 1),
+                new clsPersona(5, "Lydia", "Pérez", 3)
             };
 
          
