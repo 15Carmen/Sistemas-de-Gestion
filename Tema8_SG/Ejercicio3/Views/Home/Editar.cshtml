@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Ejercicio3.Models.clsPersona
+
+<div class="text-center">
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <label>Nombre: </label>
+        <input type="text" name="nombre" value="@Model.Nombre" />
+        <p>@Html.ValidationMessageFor(m => m.Nombre)</p>
+
+        <br />
+
+        <label>Apellido: </label>
+        @Html.TextBox("apellido", Model.Apellido)
+        <p>@Html.ValidationMessageFor(m => m.Apellido)</p>
+        <br />
+
+        <label>Edad: </label>
+        @Html.TextBoxFor(m => m.Edad)
+        <p>@Html.ValidationMessageFor(m => m.Edad)</p>
+        <br />
+
+        <button type="submit">Guardar</button>
+
+    }
+</div>

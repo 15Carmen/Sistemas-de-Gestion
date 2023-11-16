@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    @Html.ActionLink("Ir a saludo", "Saludo", "Home", new {nombre = "Carmen"})
+</div>
