@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@using (Html.BeginForm ("IndexPost", "Home", FormMethod.Post))
+{
+    <label>Nombre: </label>
+    <input type="text" name="nombre"/>
+    <br/>
+    <button type="submit">Enviar</button>
+
+}
