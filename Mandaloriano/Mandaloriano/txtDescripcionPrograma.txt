@@ -1,0 +1,41 @@
+﻿Mandaloriano
+
+	Capa DAL
+		ListadosDal
+			clsListadoMisiones
+				List<clsMisiones> getListaCompletaMisiones()
+		GestionRegistrosDAL
+			clsSeleccionarMision
+				clsMision seleccionarMisionPorId(List<clsMision> misiones, int idMision)
+
+	Capa BL
+		Tiene la misma función que la capa DAL
+
+	Capa Entidades
+		clsMision
+			Id
+			NombreMision
+			Detalles
+			Creditos
+
+	Capa UI
+		Model
+			ViewModel
+				List<clsMision> ListaMisones
+				clsMision Mision
+				
+		Controllers
+
+			action result Index()
+				List<clsMision> listadoMisiones
+				return View(new ViewModel(listadoMisiones, new clsMisiones()))
+
+			[Http Post]
+			action reult Index(int misionSeleccionada)
+				List<clsMision> listadoMisiones
+				clsMision misionMostrada
+				return View(new ViewModel(listadoMisiones, misionMostrada))		
+
+		Views
+			Home
+				Index
