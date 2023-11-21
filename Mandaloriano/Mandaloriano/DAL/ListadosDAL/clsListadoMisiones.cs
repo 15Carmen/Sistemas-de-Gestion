@@ -16,30 +16,54 @@ namespace Mandaloriano.DAL.ListadosDAL
                 1,
                 "Rescate de Baby Yoda",
                 "Debes hacerte con Grogu y llevárselo a Luke SkyWalker para su entrenamiento.",
-                "Recompensa: 5000 créditos."
+                5000
                 ));
 
             lista.Add(new clsMision(
                 2,
                 "Recuperar armadura Beskar",
                 "La armadura de Bershka ha sido robada. Debes encontrarla.",
-                "Recompensa: 2000 créditos"
+                2000
                 ));
             lista.Add(new clsMision(
                 3,
                 "Planeta Sorgon",
                 "Debes llevar a un niño de vuelta a su planeta natal “Sorgon”.",
-                "Recompensa: 500 créditos."
+                500
                 ));
             lista.Add(new clsMision(
                 4,
                 "Renacuajos",
                 "Debes llevar a una Dama Rana y sus huevos de Tatooine a la luna del estuario Trask, donde su esposo fertilizará los huevos.",
-                "Recompensa: 500 créditos."
+                500
                 ));
 
             return lista;
         }
+
+        /// <summary>
+        /// Función que devuelve la misión de la lista que tenga el mismo id que el pasado por parámetro.
+        /// Si no encuentra ninguna coincidencia devuelve un objeto misión creado sin parámetros
+        /// Pre: los id deben ser unicos
+        /// Post: ninguna
+        /// </summary>
+        /// <param name="misiones"></param>
+        /// <param name="idMision"></param>
+        /// <returns></returns>
+        public static clsMision seleccionarMisionPorId(List<clsMision> misiones, int idMision)
+        {
+
+            foreach (clsMision m in misiones)
+            {
+                if (m.Id == idMision)
+                {
+                    return m;
+                }
+            }
+            return new clsMision();
+
+        }
+
     }
 
 }

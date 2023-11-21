@@ -1,5 +1,4 @@
-﻿using Mandaloriano.DAL.GestionRegistrosDAL;
-using Mandaloriano.DAL.ListadosDAL;
+﻿using Mandaloriano.DAL.ListadosDAL;
 using Mandaloriano.Entidades;
 using Mandaloriano.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -26,7 +25,7 @@ namespace Mandaloriano.Controllers
         public IActionResult Index(int misionSeleccionada)
         {
             List<clsMision> listadoMisiones = clsListadoMisiones.getListaCompletaMisiones();
-            clsMision misionMostrada = clsSelccionarMision.seleccionarMisionPorId(listadoMisiones, misionSeleccionada);
+            clsMision misionMostrada = clsListadoMisiones.seleccionarMisionPorId(listadoMisiones, misionSeleccionada);
             return View(new ViewModel(listadoMisiones, misionMostrada));
             
         }

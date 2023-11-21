@@ -6,7 +6,7 @@
         private int id;
         private string nombreMision;
         private string detalles;
-        private string creditos;
+        private int creditos;
 
         #endregion
 
@@ -14,7 +14,7 @@
 
         public clsMision() { }
 
-        public clsMision(int id, string nombreMision, string detalles, string creditos)
+        public clsMision(int id, string nombreMision, string detalles, int creditos)
         {
             this.id = id;
             this.nombreMision = nombreMision;
@@ -41,7 +41,7 @@
             get { return detalles; }
             set { detalles = value; }
         }
-        public string Creditos
+        public int Creditos
         {
             get { return creditos; }
             set { Creditos = value; }

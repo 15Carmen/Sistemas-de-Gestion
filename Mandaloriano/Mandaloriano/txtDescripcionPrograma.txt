@@ -4,9 +4,8 @@
 		ListadosDal
 			clsListadoMisiones
 				List<clsMisiones> getListaCompletaMisiones()
-		GestionRegistrosDAL
-			clsSeleccionarMision
 				clsMision seleccionarMisionPorId(List<clsMision> misiones, int idMision)
+						
 
 	Capa BL
 		Tiene la misma función que la capa DAL

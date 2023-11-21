@@ -28,3 +28,33 @@ C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Mandaloriano\Mandaloriano\obj\Debug\ne
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.pdb
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.genruntimeconfig.cache
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\ref\Mandaloriano.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\appsettings.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.staticwebassets.runtime.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.exe
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.deps.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.runtimeconfig.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\bin\Debug\net7.0\Mandaloriano.pdb
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.AssemblyInfoInputs.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.AssemblyInfo.cs
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.csproj.CoreCompileInputs.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.RazorAssemblyInfo.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.RazorAssemblyInfo.cs
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.Mandaloriano.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.build.Mandaloriano.props
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Mandaloriano.props
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Mandaloriano.props
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\scopedcss\bundle\Mandaloriano.styles.css
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\scopedcss\projectbundle\Mandaloriano.bundle.scp.css
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\refint\Mandaloriano.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.pdb
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\Mandaloriano.genruntimeconfig.cache
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Mandaloriano\Mandaloriano\obj\Debug\net7.0\ref\Mandaloriano.dll
