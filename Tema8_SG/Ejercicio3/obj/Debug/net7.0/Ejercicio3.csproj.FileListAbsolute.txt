@@ -28,3 +28,33 @@ C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.pdb
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.genruntimeconfig.cache
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\ref\Ejercicio3.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\appsettings.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.staticwebassets.runtime.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.exe
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.deps.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.runtimeconfig.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\bin\Debug\net7.0\Ejercicio3.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.AssemblyInfoInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.AssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.csproj.CoreCompileInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.RazorAssemblyInfo.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.RazorAssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets\msbuild.Ejercicio3.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets\msbuild.build.Ejercicio3.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ejercicio3.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ejercicio3.props
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\scopedcss\bundle\Ejercicio3.styles.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\scopedcss\projectbundle\Ejercicio3.bundle.scp.css
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\refint\Ejercicio3.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.genruntimeconfig.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema8_SG\Ejercicio3\obj\Debug\net7.0\ref\Ejercicio3.dll

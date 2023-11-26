@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Entidades.clsPersona
+
+<div class="text-center">
+
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <label>Nombre: </label>
+        @Html.TextBox("nombre", Model.Nombre)
+        <p>@Html.ValidationMessageFor(m => m.Nombre)</p>
+
+        <br />
+
+        <label>Apellidos: </label>
+        @*Forma 2 de porner por pantalla algo de la clase persona, con un helper*@
+        @Html.TextBox("apellidos", Model.Apellidos)
+        <p>@Html.ValidationMessageFor(m => m.Apellidos)</p>
+
+        <br />
+
+        <label>Fecha de nacimiento: </label>
+        @Html.TextBox("fechaNac", Model.FechaNac)
+        <p>@Html.ValidationMessageFor(m => m.FechaNac)</p>
+
+        <br />
+
+        <label>Dirección: </label>
+        @Html.TextBox("direccion", Model.Direccion)
+        <p>@Html.ValidationMessageFor(m => m.Direccion)</p>
+
+        <br />
+
+        <label>Teléfono: </label>
+        @Html.TextBox("telefono", Model.Telefono)
+        <p>@Html.ValidationMessageFor(m => m.Telefono)</p>
+
+        <button type="submit">Guardar</button>
+
+    }
+
+</div>
