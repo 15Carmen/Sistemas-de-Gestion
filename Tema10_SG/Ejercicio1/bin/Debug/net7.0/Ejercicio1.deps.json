@@ -2367,6 +2367,10 @@
         }
       },
       "DAL/1.0.0": {
+        "dependencies": {
+          "Entidades": "1.0.0",
+          "Microsoft.Data.SqlClient": "5.1.2"
+        },
         "runtime": {
           "DAL.dll": {}
         }

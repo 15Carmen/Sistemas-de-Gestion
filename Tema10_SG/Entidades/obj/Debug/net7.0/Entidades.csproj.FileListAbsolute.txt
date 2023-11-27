@@ -9,3 +9,14 @@ C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Entidades\obj\Debug\net7.0
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\refint\Entidades.dll
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\ref\Entidades.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\ref\Entidades.dll

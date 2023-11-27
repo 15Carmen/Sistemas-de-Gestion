@@ -2019,23 +2019,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cmartin\\.nuget\\packages\\": {},
+    "C:\\Users\\cmnbo\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\cmartin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\cmnbo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cmartin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cmnbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2051,8 +2051,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {
-              "projectPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj"
+            "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {
+              "projectPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj"
             }
           }
         }
@@ -2088,7 +2088,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

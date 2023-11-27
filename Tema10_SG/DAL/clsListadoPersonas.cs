@@ -20,7 +20,7 @@ namespace DAL
 
             clsPersona oPersona;
 
-            conn.ConnectionString = "server=107-25\\SQLEXPRESS;database=Persona;uid=prueba;pwd=123;trustServerCertificate=true";
+            conn.ConnectionString = "server=ODENADOR-CARMEN\\SQLEXPRESS;database=Persona;uid=prueba;pwd=Marnu;trustServerCertificate=true";
 
             try
             {

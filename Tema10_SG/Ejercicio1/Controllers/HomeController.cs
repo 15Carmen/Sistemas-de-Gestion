@@ -19,7 +19,7 @@ namespace Ejercicio1.Controllers
 
             try
             {
-                conn.ConnectionString = "server=107-25\\SQLEXPRESS;database=Persona;uid=prueba;pwd=123;trustServerCertificate=true";
+                conn.ConnectionString = "server=ODENADOR-CARMEN\\SQLEXPRESS;database=Persona;uid=prueba;pwd=Marnu;trustServerCertificate=true";
                 conn.Open();
                 ViewBag.ConnectionState = $"Conectado: {conn.State}";
             }

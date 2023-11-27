@@ -36,7 +36,7 @@ namespace Ejercicio3.Controllers
             {
                 // Todo Correcto
 
-                //Podemos mandar a una página de éxito
+                //Mandamos al usuario a la vista de la persona modificada
 
                 action = View("PersonaModificada", oPersona);
 
