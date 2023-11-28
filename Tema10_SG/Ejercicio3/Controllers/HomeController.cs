@@ -31,5 +31,44 @@ namespace Ejercicio3.Controllers
             }
         }
 
+        public IActionResult DeleteView(int id)
+        {
+            try{
+                List<clsPersona> listaPersonas = clsListadoPersonasDAL.getListadoPersonas();
+                clsPersona oPersona = clsListadoPersonasDAL.obtenerPersonaPorId(listaPersonas,id);
+                return View(oPersona);
+            }catch (Exception ex)
+            {
+                ViewBag.Error = "Ha ocurrido un error";
+                return View("Error");
+            }
+        }
+
+        [HttpPost]
+        public ActionResult DeleteView()
+        {
+            return RedirectToAction("borrar");
+
+        }
+
+        public ActionResult borrar(clsPersona persona)
+        {
+            try
+            {
+
+                int cantRows = DAL.Manejadoras.clsManejadoraPersonasDAL.deletePersonaDAL(persona.Id);
+
+                ViewBag.cantRows = cantRows;
+
+                return View();
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Ha ocurrido un error";
+                return View("Error");
+            }
+        }
+
     }
 }

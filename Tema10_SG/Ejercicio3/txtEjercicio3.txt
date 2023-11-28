@@ -5,6 +5,7 @@
 	Listados
 		clsListadoPersonasDAL
 			List<clsPersona>getListadoPersonas
+			clsPersona obtenerPersonaPorId(List<clsPersona> listaPersonas, int id)
 
 		
 

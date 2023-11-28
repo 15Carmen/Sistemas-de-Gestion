@@ -1,12 +1,18 @@
 ﻿using Microsoft.Data.SqlClient;
 using Entidades;
 using DAL.Conexion;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace DAL.Listados
 {
     public class clsListadoPersonasDAL
     {
-
+        /// <summary>
+        /// Función que se conecta a la base de datos y devuelve la lista completa de las personas 
+        /// Pre: La bbdd no debe estar vacía
+        /// Post: ninguna
+        /// </summary>
+        /// <returns>listado completo de personas</returns>
         public static List<clsPersona> getListadoPersonas()
         {
 
@@ -76,6 +82,29 @@ namespace DAL.Listados
 
 
             return listadoPersonas;
+        }
+
+        /// <summary>
+        /// Función que devuelve la persona de la lista que tenga el mismo id que el pasado por parámetro.
+        /// Si no encuentra ninguna coincidencia devuelve un objeto persona creado sin parámetros
+        /// Pre: los id deben ser unicos
+        /// Post: ninguna
+        /// </summary>
+        /// <param name="listaPersonas"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static clsPersona obtenerPersonaPorId(List<clsPersona> listaPersonas, int id)
+        {
+
+            foreach (clsPersona p in listaPersonas)
+            {
+                if (p.Id == id)
+                {
+                    return p;
+                }
+            }
+            return new clsPersona();
+
         }
 
 

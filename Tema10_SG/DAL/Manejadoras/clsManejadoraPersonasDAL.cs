@@ -19,7 +19,7 @@ namespace DAL.Manejadoras
         /// </summary>
         /// <param name="id"></param>
         /// <returns>numero de filas afectadas</returns>
-        public int deletePersonaDAL(int id)
+        public static int deletePersonaDAL(int id)
         {
             int numeroFilasAfectadas = 0;
             clsConexion miConexion = new clsConexion();

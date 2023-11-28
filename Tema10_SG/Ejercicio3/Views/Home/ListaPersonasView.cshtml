@@ -5,7 +5,7 @@
 <h1>Lista de personas</h1>
 
 <p>
-    <a asp-action="Create">Insert a new person</a>
+    <a asp-action="InsertView">Insert a new person</a>
 </p>
 <table class="table">
     <thead>
@@ -70,9 +70,9 @@
                 </td>
                 <td>
 
-                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                    @Html.ActionLink("Details", "Details", new {  id=item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new {  id=item.Id })
+                    @Html.ActionLink("Edit", "EditView", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "DetailsView", new {  id=item.Id }) |
+                    @Html.ActionLink("Delete", "DeleteView", new {  id=item.Id })
 
                 </td>
             </tr>
