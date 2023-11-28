@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Microsoft.Data.SqlClient;
-using DAL;
+using DAL.Listados;
+using Entidades;
 
 namespace Ejercicio1.Controllers
 {
@@ -12,18 +13,15 @@ namespace Ejercicio1.Controllers
 
         public IActionResult Index()
         {
-
-            SqlConnection conn = new SqlConnection();
-
+            SqlConnection connection = new SqlConnection();
             ViewBag.ConnectionState = "No se ha intentado conectar";
 
             try
             {
-                conn.ConnectionString = "server=ODENADOR-CARMEN\\SQLEXPRESS;database=Persona;uid=prueba;pwd=Marnu;trustServerCertificate=true";
-                conn.Open();
-                ViewBag.ConnectionState = $"Conectado: {conn.State}";
-            }
-            catch (Exception ex)
+                connection.ConnectionString = "server=isakatha.database.windows.net;database=BDIsaKatha;uid=prueba;pwd=fernandoG321;trustServerCertificate=true";
+                connection.Open();
+                ViewBag.ConnectionState = $"Se ha abierto la conexión: {connection.State}";
+            }catch (Exception ex)
             {
                 ViewBag.ConnectionState = $"Error al conectar: {ex.Message}";
             }
@@ -31,18 +29,21 @@ namespace Ejercicio1.Controllers
             return View();
         }
 
-
-        public ActionResult Lista()
+        public ActionResult clsListadoPersonasView()
         {
             try
             {
-                return View(DAL.clsListadoPersonas.getListadoPersonas());
-            }catch (Exception ex)
+                return View(clsListadoPersonasDAL.getListadoPersonas());
+            }
+            catch (Exception ex)
             {
                 ViewBag.Error = "Ha ocurrido un error";
                 return View("Error");
             }
         }
+
+       
+       
 
        
     }

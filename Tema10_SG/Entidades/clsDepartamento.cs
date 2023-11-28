@@ -10,8 +10,8 @@ namespace Entidades
     {
         #region atributos
 
-        public int idDepartamento;
-        public string nombre;
+        private int idDepartamento;
+        private string nombre;
         #endregion
 
         #region constructores
@@ -26,6 +26,22 @@ namespace Entidades
         {
             this.idDepartamento = idDepartamento;
             this.nombre = nombre;
+        }
+
+        #endregion
+
+        #region Propiedades
+
+        public int IdDepartamento
+        {
+            get { return idDepartamento; }
+            set { idDepartamento = value;}
+        }
+
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
         }
 
         #endregion

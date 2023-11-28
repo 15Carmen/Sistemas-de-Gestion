@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Ejercicio1
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/cmnbo/GitHub/Sistemas-de-Gestion/Tema10_SG/Ejercicio1/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/cmnbo/GitHub/Sistemas-de-Gestion/Tema10_SG/Ejercicio1/Views/Home/clsListadoPersonasView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjbHNMaXN0YWRvUGVyc29uYXNWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/cmnbo/GitHub/Sistemas-de-Gestion/Tema10_SG/Ejercicio1/Views/Home/Lista.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMaXN0YS5jc2h0bWw=
+[C:/Users/cmnbo/GitHub/Sistemas-de-Gestion/Tema10_SG/Ejercicio1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/cmnbo/GitHub/Sistemas-de-Gestion/Tema10_SG/Ejercicio1/Views/Home/Privacy.cshtml]
