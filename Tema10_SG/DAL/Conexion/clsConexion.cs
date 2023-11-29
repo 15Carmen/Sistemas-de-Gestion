@@ -68,25 +68,6 @@ namespace DAL.Conexion
 
             return conn;
         }
-
-
-        public void closeConnection(ref  SqlConnection conn)
-        {
-
-            try
-            {
-                conn.Close();
-            }
-            catch (SqlException sqle)
-            {
-                throw;
-            }
-            catch (Exception ex) 
-            {
-                throw;
-            }
-
-        }
        
 
 

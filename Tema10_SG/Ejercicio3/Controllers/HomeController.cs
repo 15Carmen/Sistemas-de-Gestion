@@ -17,7 +17,7 @@ namespace Ejercicio3.Controllers
             try
             {
 
-                List<clsPersona> listadoCompletoPersonas = clsListadoPersonasDAL.getListadoPersonasDAL();
+                List<clsPersona> listadoCompletoPersonas = clsListadoPersonasBL.getListadoPersonasBL();
                 
 
                 return View(listadoCompletoPersonas);
@@ -26,7 +26,7 @@ namespace Ejercicio3.Controllers
             catch (Exception ex)
             {
 
-                throw ex;
+                return View("Error");
             }
         }
 
@@ -40,11 +40,12 @@ namespace Ejercicio3.Controllers
         {
             try
             {
+                //cambiar a la capa bl
                 clsHandlerPersonaDAL.insertPersonaDAL(oPersona);
-                return View();
+                return RedirectToAction("ListaPersonasView");
             }catch (Exception ex)
             {
-                throw ex;
+                return View("Error");
             }
         }
 
@@ -63,13 +64,13 @@ namespace Ejercicio3.Controllers
         {
             try
             {
-                clsPersona persona = clsListadoPersonasBL.obtenerPersonaPorId(id);
+                clsPersona persona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
                 
                 return View(persona);
             }
             catch(Exception ex)
             {
-                throw ex;
+                return View("Error");
             }
            
         }
@@ -93,13 +94,15 @@ namespace Ejercicio3.Controllers
                 else
                 {
                     ViewBag.Info = "La persona se ha borrado correctamente";
+                    return RedirectToAction("Listado");
                 }
-                
-                return RedirectToAction("Listado", clsListadoPersonasBL.getListadoPersonasBL());
 
-            }catch(Exception ex)
+                return View(clsListadoPersonasBL.obtenerPersonaPorIdBL(id));
+
+            }
+            catch(Exception ex)
             {
-                throw ex;
+                return View("Error");
             }
         }
 

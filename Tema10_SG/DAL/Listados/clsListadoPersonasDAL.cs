@@ -96,9 +96,57 @@ namespace DAL.Listados
         public static clsPersona obtenerPersonaPorId(int id)
         {
 
-           
+            clsConexion conexion = new clsConexion();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+            clsPersona oPersona = new clsPersona();
+
+            //Añadimos un parámetro que luego necesitaremos en el comando sql.
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+
+            try
+            {
+                //abrimos la conexion y la guardamos en una variable
+                SqlConnection conexionAbierta = conexion.createConnection();
+
+                cmd.CommandText = "Select * from Personas WHERE ID=@id";
+                cmd.Connection = conexionAbierta;
+
+                reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+
+                        oPersona.Id = (int)reader["ID"];
+                        oPersona.Nombre = (string)reader["Nombre"];
+                        oPersona.Apellido = (string)reader["Apellido"];
+                        oPersona.Telefono = (string)reader["Telefono"];
+                        oPersona.Direccion = (string)reader["Direccion"];
+                        oPersona.Foto = (string)reader["Foto"];
+                        oPersona.FechaNacimiento = (DateTime)reader["FechaNacimiento"];
+                        oPersona.IdDepartamento = (int)reader["IDDepartamento"];
+
+                    }
+                }
+                reader.Close();
+                //Cerramos la conexión
+                conexionAbierta.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return oPersona;
+
 
         }
+
+
 
 
     }

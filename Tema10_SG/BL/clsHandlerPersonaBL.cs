@@ -24,7 +24,7 @@ namespace BL
             DateTime fechaActual = DateTime.Now;
 
             //Si el dia de la semana es miercoles se devuelve un 0, ya que no se pude borrar ese dia
-            if (fechaActual.DayOfWeek == DayOfWeek.Wednesday)
+            if (fechaActual.DayOfWeek == DayOfWeek.Tuesday)
             {
                 numFilasAfectadas = -1;
             }
