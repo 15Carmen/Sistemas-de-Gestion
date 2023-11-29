@@ -33,7 +33,7 @@ namespace Ejercicio1.Controllers
         {
             try
             {
-                return View(clsListadoPersonasDAL.getListadoPersonas());
+                return View(clsListadoPersonasDAL.getListadoPersonasDAL());
             }
             catch (Exception ex)
             {

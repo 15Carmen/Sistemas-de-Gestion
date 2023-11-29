@@ -12,8 +12,8 @@
 	Manejadoras
 		clsManejadoraPersonasDAL
 			int deletePersonaDAL(int id)
-			int updatePersonaDAL(int id, int idDepartamento)
-			int insertPwrsonaDAL(todos los atributos de clsPErsona)
+			int updatePersonaDAL(todos los atributos de clsPersona)
+			int insertPwrsonaDAL(todos los atributos de clsPersona)
 
 Entidades
 	clsDepartamentos
@@ -37,13 +37,9 @@ UI
 	Models
 		ViewModels
 			clsListadoPersonasVM
-			clsEditarVM
-			clsActualizarVM
-			clsBorrarVM
-			clsInsertarVM
+			clsPersonaVM
 
 	Views
-		Index
 		clsListadoPersonasView
 		clsEditarView
 		clsActualizarView
@@ -58,6 +54,6 @@ BL
 	Manejadoras
 		clsManejadoraPersonasBL
 			int deletePersonaBL(int id)
-			int updatePersonaBL(int id, int idDepartamento)
-			int insertPwrsonaBL(todos los atributos de clsPErsona)
+			int updatePersonaBL(todos los atributos de clsPersona)
+			int insertPwrsonaBL(todos los atributos de clsPersona)
 

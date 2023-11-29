@@ -13,7 +13,7 @@ namespace DAL.Listados
         /// Post: ninguna
         /// </summary>
         /// <returns>listado completo de personas</returns>
-        public static List<clsPersona> getListadoPersonas()
+        public static List<clsPersona> getListadoPersonasDAL()
         {
 
             clsConexion miConexion = new clsConexion();
@@ -93,17 +93,10 @@ namespace DAL.Listados
         /// <param name="listaPersonas"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public static clsPersona obtenerPersonaPorId(List<clsPersona> listaPersonas, int id)
+        public static clsPersona obtenerPersonaPorId(int id)
         {
 
-            foreach (clsPersona p in listaPersonas)
-            {
-                if (p.Id == id)
-                {
-                    return p;
-                }
-            }
-            return new clsPersona();
+           
 
         }
 
