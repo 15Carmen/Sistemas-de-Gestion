@@ -1,0 +1,71 @@
+DAL
+	ListadosDAL
+		clsListadoMarcasDAL
+			List<clsMarcas> listadoCompletoMarcasDAL()
+		
+		clsListadoModelosDAL
+			List<clsModelos> listadoCompletoModelosDAL()
+			List<clsModelo> listadoModelosPorMarcaDAL(int idMarca)
+			clsModelo seleccionarModeloPorIdDAL(int idModelo)
+			
+
+BL
+	ListadosBL
+		clsListadoMarcasBL
+			List<clsMarcas> listadoCompletoMarcasBL()
+		
+		clsListadoModelosBL
+			List<clsModelos> listadoCompletoModelosBL()
+			List<clsModelo> listadoModelosPorMarcaBL(int idMarca)
+			clsModelo seleccionarModeloPorIdBL(int idModelo)
+
+Entidades
+	clsMarcas
+		int idMarca
+		string nombreMarca
+
+	clsModelos
+		int idModelo
+		int idMarca
+		string nombreModelo
+		double precio
+
+UI
+	Controllers
+		HomeController
+			action result Index()
+				List <clsMarcas> listadoMarcas
+				return View (listadoMarcas)
+				
+			[HttpPost]
+			action result IndexPost()
+				List <clsMarcas> listadoMarcas
+				List <clsModelos> listadoModelosDeMarca(int idMarca)
+				IndexVM vm = new IndexVM (listadoMarcas, listadoModelosDeMarca)
+
+				return View (vm)
+
+			action result DetallesModelo(int idModelo)
+				clsModelo modeloPorId
+				DetallesVM vm = new DetallesVM (modeloPorId)
+				return View (vm)
+				
+
+			[HttpPost]
+			action result DetallesModeloPost(clsModelo oModelo)
+				clsModelo modeloEditado
+				DetallesVM = vm = new DetallesVM (oModelo)
+				return View(vm)
+
+	Models
+		ViewModel
+			IndexVM
+				List<clsMarcas> ListaMarcas
+				List<clsModelos> ListaModelosPorMarca
+
+			DetallesModeloVM
+				clsModelo ModeloEditado
+					
+	Views
+		Index
+		DetallesModelo

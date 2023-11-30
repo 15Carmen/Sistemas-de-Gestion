@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BL\BL.csproj" />
-    <ProjectReference Include="..\Entidades\Entidades.csproj" />
+    <Compile Remove="HandlerDAL\**" />
+    <EmbeddedResource Remove="HandlerDAL\**" />
+    <None Remove="HandlerDAL\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ListadosDAL\" />
-    <Folder Include="HandlerDAL\" />
+    <ProjectReference Include="..\Entidades\Entidades.csproj" />
   </ItemGroup>
 
 </Project>
