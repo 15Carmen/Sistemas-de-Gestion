@@ -5,14 +5,14 @@ using DAL.Listados;
 using Entidades;
 using DAL.Manejadoras;
 using BL;
+using Ejercicio3.Models.ViewModels;
 
 namespace Ejercicio3.Controllers
 {
     public class HomeController : Controller
     {
         
-
-        public IActionResult ListaPersonasView()
+        public IActionResult Index()
         {
             try
             {
@@ -30,43 +30,108 @@ namespace Ejercicio3.Controllers
             }
         }
 
-        public ActionResult InsertPersonaView()
+        public IActionResult Details(int id)
         {
-            return View();
+            try
+            {
+                clsPersona persona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);              
+
+                clsPersonaConNombreDepartamento vm = new clsPersonaConNombreDepartamento(persona);
+
+                return View(vm);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
         }
 
+        
+        public ActionResult Insert()
+        {
+            try
+            {
+                clsPersonaConListadoDepartamentos vm = new clsPersonaConListadoDepartamentos();
+
+                return View(vm);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+        }
+
+        [ActionName("Insert")]
         [HttpPost]
         public ActionResult InsertPost(clsPersona oPersona)
         {
             try
             {
-                //cambiar a la capa bl
-                clsHandlerPersonaDAL.insertPersonaDAL(oPersona);
-                return RedirectToAction("ListaPersonasView");
+                int numFilasAfectadas = clsHandlerPersonaBL.insertPersonaBL(oPersona);
+
+                if (numFilasAfectadas > 0)
+                {
+                    ViewBag.Info = "La persona se ha creado correctamente";
+                }
+
+                return View("Index", clsListadoPersonasBL.getListadoPersonasBL());
+
             }catch (Exception ex)
             {
                 return View("Error");
             }
         }
 
-        public ActionResult EditPersonaView()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult EditPost(clsPersona oPersona)
-        {
-            return View();
-        }
-
-        public ActionResult DeletePersonaView(int id)
+        public ActionResult Edit(int id)
         {
             try
             {
                 clsPersona persona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
+
+                clsPersonaConListadoDepartamentos vm = new clsPersonaConListadoDepartamentos(persona);
+
+                return View(vm);
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+
+        }
+
+        [ActionName ("Edit")]
+        [HttpPost]
+        public ActionResult EditPost(clsPersona oPersona)
+        {
+
+            try
+            {
+                int numFilasAfectadas = clsHandlerPersonaBL.updatePersonaBL(oPersona);
+
+                if(numFilasAfectadas > 0)
+                {
+                    ViewBag.Info = "La persona se ha editado correctamente";
+                }
+
+                return View("Index", clsListadoPersonasBL.getListadoPersonasBL());
+            }
+            catch (Exception ex)
+            {
+                return View("Error");
+            }
+
+        
+        }
+
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                clsPersona persona = clsListadoPersonasBL.obtenerPersonaPorIdBL(id);
+
+                clsPersonaConNombreDepartamento vm = new clsPersonaConNombreDepartamento(persona);
                 
-                return View(persona);
+                return View(vm);
             }
             catch(Exception ex)
             {
@@ -75,7 +140,7 @@ namespace Ejercicio3.Controllers
            
         }
 
-        [ActionName("DeletePersonaView")]
+        [ActionName("Delete")]
         [HttpPost]
         public ActionResult DeletePost(int id)
         {
@@ -88,16 +153,16 @@ namespace Ejercicio3.Controllers
                     ViewBag.Info = "No existe esa persona";
                 }else if (numeroFilas == -1)
                 {
-                    ViewBag.Info = "Hoy es miércoles, por lo que no se puede borrar ninguna persona";
+                    ViewBag.Info = "Hoy es martes, por lo que no se puede borrar ninguna persona";
 
                 }
                 else
                 {
                     ViewBag.Info = "La persona se ha borrado correctamente";
-                    return RedirectToAction("Listado");
+                    
                 }
 
-                return View(clsListadoPersonasBL.obtenerPersonaPorIdBL(id));
+                return View("Index", clsListadoPersonasBL.getListadoPersonasBL());
 
             }
             catch(Exception ex)

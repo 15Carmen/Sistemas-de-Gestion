@@ -29,12 +29,12 @@ namespace DAL.Listados
 
             try
             {
-                SqlConnection conn = miConexion.createConnection();
+                SqlConnection connOpen = miConexion.createConnection();
 
                 //Creamos el comando
 
                 cmd.CommandText = "SELECT * FROM Personas";
-                cmd.Connection = conn;
+                cmd.Connection = connOpen;
 
                 dr = cmd.ExecuteReader();
 
@@ -46,7 +46,7 @@ namespace DAL.Listados
                         oPersona = new clsPersona();
                         oPersona.Id = (int)dr["Id"];
                         oPersona.Nombre = (string)dr["Nombre"];
-                        oPersona.Apellido = (string)dr["Apellidos"];
+                        oPersona.Apellidos = (string)dr["Apellidos"];
                         oPersona.Telefono = (string)dr["Telefono"];
                         oPersona.Direccion = (string)dr["Direccion"];
                         
@@ -71,7 +71,7 @@ namespace DAL.Listados
                     }
 
                     dr.Close();
-                    conn.Close();
+                    connOpen.Close();
                 }
 
             }
@@ -96,9 +96,9 @@ namespace DAL.Listados
         public static clsPersona obtenerPersonaPorId(int id)
         {
 
-            clsConexion conexion = new clsConexion();
+            clsConexion miConexion = new clsConexion();
             SqlCommand cmd = new SqlCommand();
-            SqlDataReader reader;
+            SqlDataReader dr;
             clsPersona oPersona = new clsPersona();
 
             //Añadimos un parámetro que luego necesitaremos en el comando sql.
@@ -107,32 +107,46 @@ namespace DAL.Listados
             try
             {
                 //abrimos la conexion y la guardamos en una variable
-                SqlConnection conexionAbierta = conexion.createConnection();
+                SqlConnection connOpen = miConexion.createConnection();
 
                 cmd.CommandText = "Select * from Personas WHERE ID=@id";
-                cmd.Connection = conexionAbierta;
+                cmd.Connection = connOpen;
 
-                reader = cmd.ExecuteReader();
+                dr = cmd.ExecuteReader();
 
-                if (reader.HasRows)
+                if (dr.HasRows)
                 {
-                    while (reader.Read())
+                    while (dr.Read())
                     {
 
-                        oPersona.Id = (int)reader["ID"];
-                        oPersona.Nombre = (string)reader["Nombre"];
-                        oPersona.Apellido = (string)reader["Apellido"];
-                        oPersona.Telefono = (string)reader["Telefono"];
-                        oPersona.Direccion = (string)reader["Direccion"];
-                        oPersona.Foto = (string)reader["Foto"];
-                        oPersona.FechaNacimiento = (DateTime)reader["FechaNacimiento"];
-                        oPersona.IdDepartamento = (int)reader["IDDepartamento"];
+                        oPersona = new clsPersona();
+                        oPersona.Id = (int)dr["Id"];
+                        oPersona.Nombre = (string)dr["Nombre"];
+                        oPersona.Apellidos = (string)dr["Apellidos"];
+                        oPersona.Telefono = (string)dr["Telefono"];
+                        oPersona.Direccion = (string)dr["Direccion"];
 
+                        //Si sospechamos que el campo puede ser Null en la BBDD                                           
+
+                        if (dr["Foto"] != DBNull.Value)
+                        {
+                            oPersona.Foto = (string)dr["Foto"];
+                        }
+
+                        if (dr["FechaNacimiento"] != DBNull.Value)
+                        {
+                            oPersona.FechaNacimiento = (DateTime)dr["FechaNacimiento"];
+                        }
+
+                        if (dr["IdDepartamento"] != DBNull.Value)
+                        {
+                            oPersona.IdDepartamento = (int)dr["IdDepartamento"];
+                        }
                     }
                 }
-                reader.Close();
+                dr.Close();
                 //Cerramos la conexión
-                conexionAbierta.Close();
+                connOpen.Close();
 
             }
             catch (Exception ex)
