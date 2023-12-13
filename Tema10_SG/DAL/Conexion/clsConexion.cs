@@ -25,8 +25,8 @@ namespace DAL.Conexion
 
         public clsConexion()
         {
-            server = "isakatha.database.windows.net";
-            database = "BDIsaKatha";
+            server = "carmenbd.database.windows.net";
+            database = "CarmenBD";
             uid = "prueba";
             pwd = "fernandoG321";
 

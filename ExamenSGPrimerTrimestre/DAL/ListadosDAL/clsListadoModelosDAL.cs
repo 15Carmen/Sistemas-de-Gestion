@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Entidades;
@@ -72,19 +73,25 @@ namespace DAL.ListadosDAL
         /// <returns></returns>
         public static clsModelos seleccionarModeloPorIdDAL(int idModelo)
         {
-            //Recorremos la lista completa de los modelos
-            foreach(clsModelos modelo in listadoCompletoModelosDAL())
+            bool encontrado = false;
+            int contadorBusqueda = 0;
+            clsModelos modelo = null;
+
+            //Mientras no se haya encontrado el modelo y no se haya recorrido la lista completa
+            //recorremos la lista
+            while (!encontrado && listadoCompletoModelosDAL().Count < contadorBusqueda)
             {
                 //Si el id del modelo es igual al introducido por parámetro
-                if(modelo.IdModelo == idModelo)
+                if (listadoCompletoModelosDAL()[contadorBusqueda].IdModelo == idModelo)
                 {
                     //Devolvemos el modelo coincidente
-                    return modelo;
-
+                    modelo = listadoCompletoModelosDAL()[contadorBusqueda];
+                    contadorBusqueda++;
+                    encontrado = true;
                 }
             }
 
-            return new clsModelos();
+            return modelo;
 
         }
 
