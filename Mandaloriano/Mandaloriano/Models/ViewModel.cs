@@ -8,7 +8,7 @@ namespace Mandaloriano.Models
     /// </summary>
     public class ViewModel
     {
-        #region Atributos
+        #region Propiedades
         public List<clsMision> ListaMisiones { get; set; }
         public clsMision Mision { get; set; }
         
