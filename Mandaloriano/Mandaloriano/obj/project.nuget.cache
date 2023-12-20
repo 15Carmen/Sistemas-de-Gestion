@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "e/5UYFjAbQvVKNzzs3+VUzs0H/AZTF+WM7ZlGHZFcQJnsbyvpVxITsS8yujiW8+yCBzYpcuXScFUOUi4om7oIg==",
+  "dgSpecHash": "d4eKpPG4ayZrHoam3pB3lFw8GumuxsK/RMCKlnk+GbPu9OUq7n70Y+odg+7RcnZs+g34/J6mFkY2xXc6o+dFWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Mandaloriano\\Mandaloriano\\Mandaloriano.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

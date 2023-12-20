@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hx/eQIxWX+Ewsk0+DyK1tOZGn8TxxFP9958EaFvJf2fZgSWIlib70sUFasF8v9CII0KOZ3M3Y1u4NBesCXsKcA==",
+  "dgSpecHash": "uPBqCC3Oceb+SPgMHIgmuP32frS1jvfUwz+BOEwGR5+Kld1FbWCQR1SrV3YXUQ0rD3W+MDy4Y++A5Zozz1sp7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

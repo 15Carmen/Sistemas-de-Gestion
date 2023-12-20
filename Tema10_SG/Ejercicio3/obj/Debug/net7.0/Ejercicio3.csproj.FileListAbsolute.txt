@@ -500,3 +500,4 @@ C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Ejercicio3\bin\Debug\net7.0\
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Ejercicio3\bin\Debug\net7.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Ejercicio3\bin\Debug\net7.0\BL.dll
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Ejercicio3\bin\Debug\net7.0\BL.pdb
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Ejercicio3\obj\Debug\net7.0\Ejercicio3.sourcelink.json

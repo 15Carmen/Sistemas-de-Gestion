@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/Eyy1e6N7k7pNRvB5+MahFijUVvnT2Aan+b9opHatJvXovC0gSawQhRf7qdiONF6uywYMDgIhwYn0Czydx9C2A==",
+  "dgSpecHash": "JJssM/WJOWBaW+XHb+IjIQizu3WfHsgugTye1ney9KleBwedKz0eRSNhT8VNzebkXVczyitOSYUyUxnrcpR+/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Ejercicio3\\Ejercicio3.csproj",
   "expectedPackageFiles": [
@@ -208,7 +208,11 @@
     "C:\\Users\\cmartin\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\cmartin\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\cmartin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\cmartin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\cmartin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\cmartin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

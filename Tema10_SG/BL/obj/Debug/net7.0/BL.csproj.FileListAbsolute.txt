@@ -32,3 +32,4 @@ C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\BL\obj\Debug\net7.0\BL.dll
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\BL\obj\Debug\net7.0\refint\BL.dll
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\BL\obj\Debug\net7.0\BL.pdb
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\BL\obj\Debug\net7.0\ref\BL.dll
+C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\BL\obj\Debug\net7.0\BL.sourcelink.json
