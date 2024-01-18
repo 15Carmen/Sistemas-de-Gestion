@@ -21,3 +21,4 @@ C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\r
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.pdb
 C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\ref\Entidades.dll
 C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json
+C:\Users\cmnbo\GitHub\Sistemas-de-Gestion\Tema10_SG\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json

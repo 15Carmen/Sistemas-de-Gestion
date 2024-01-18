@@ -10,6 +10,6 @@
     <WebStackScaffolding_LayoutPageFile />
     <Controller_SelectedScaffolderID>ApiControllerWithActionsScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\Users\cmartin\GitHub\Sistemas de Gestion\Tema10_SG\Ejercicio3\Properties\PublishProfiles\CrudCarmen - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>CrudCarmen - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

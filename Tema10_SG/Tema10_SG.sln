@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ejercicio3", "Ejercicio3\Ejercicio3.csproj", "{05D77D57-F5D3-46CE-ADB5-A902D384E1F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{EB8BAB6A-EBBE-4A9C-8390-DEE97E5DEFDA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{EB8BAB6A-EBBE-4A9C-8390-DEE97E5DEFDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
