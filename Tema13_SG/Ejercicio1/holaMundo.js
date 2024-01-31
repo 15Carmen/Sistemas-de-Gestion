@@ -6,19 +6,25 @@ function inicializaEvento(){
 }
 
 function saludar(){
+    //punto 1
     let miLlamada = new XMLHttpRequest();
     let divMensaje = document.getElementById("divMensaje")
 
-    miLlamada.open("GET", "Hola.html")
+    //punto 2
+    miLlamada.open("GET", "http://127.0.0.1:5500/Ejercicio1/Hola.html")
 
+    //punto 4
     miLlamada.onreadystatechange = function(){
+
+        alert(miLlamada.readyState);
         if(miLlamada.readyState < 4){
             divMensaje.innerHTML = "Cargando..."
         }else if (miLlamada.readyState==4 && miLlamada.status == 200){
-            let response = JSON.parse(miLlamada.responseText);
-            divMensaje.innerHTML = response[1].nombre + " " + response[1].apellidos;
+            
+            divMensaje.innerHTML = this.responseText;
         }
     };
 
+    //punto 5
     miLlamada.send();
 }

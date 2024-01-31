@@ -1,10 +1,16 @@
 window.onload = inicializaEvento;
 
+var divMensaje;
+var listaDepartamentos = [];
+
 function inicializaEvento() {
-  document.getElementById("btnLlamada").addEventListener("click", pedirNombre, false);
+  divMensaje = document.getElementById("btnLlamada");
+  peticionDepartamentos();
 }
 
-function rellenarTablaPersonas(arrayPersonas/*, arrayDepartamentos*/)
+
+/*
+function rellenarTablaPersonas(arrayPersonas, arrayDepartamentos)
 {
     var tablaPersonas = document.getElementById("tablaPersonas"); //cogemos la tabla
     var tbody = document.createElement("tbody"); //creamos el cuerpo de la tabla
@@ -22,53 +28,72 @@ function rellenarTablaPersonas(arrayPersonas/*, arrayDepartamentos*/)
         fila.appendChild(columna);
 
         columna = document.createElement("td");
-        columna.innerHTML = arrayPersonas[i].nombreDepartamento;
-        fila.appendChild(columna);
+        
+        while(arrayPersonas[i].idDepartamento == arrayDepartamentos[i].idDepartamento){
+            columna.innerHTML = arrayDepartamentos[i].nombreDepartamento;
+            fila.appendChild(columna);
+        }
 
-        /*
-        var departamento = arrayPersonas[i].idDepartamento  //guardamos el id del departamento de la persona
-        columna = document.createElement("td") //creamos la columna
-        columna.innerText = arrayDepart[departamento].nombre //le metemos el nombre del departamento
-        fila.appendChild(contenido)
-*/
-        tbody.appendChild(fila);
+        tbody.appendChild(fila);    //añadimos la fila al body
         
     }
-    tablaPersonas.appendChild(tbody);
+    tablaPersonas.appendChild(tbody);   //añadimos el body a la tabla de personas
     console.log(tbody);
 }
+*/
 
-
-function pedirNombre() {
-
+function peticionDepartamentos(){
     //punto 1
-    var miLlamadaPersonas = new XMLHttpRequest();
-    //var miLlamadaDepartamentos = new XMLHttpRequest();
-    var divState = document.getElementById("divState");
-
+    let requestDepartamentos = new XMLHttpRequest();
+    let tablaDepartamentos  = document.getElementById("tablaPersonas");
+    
     //punto 2
-    miLlamadaPersonas.open("GET", "https://crudnervion.azurewebsites.net/api/personas", false);
-    //miLlamadaDepartamentos.open("GET", "https://crudnervion.azurewebsites.net/api/departamentos", true);
+    requestDepartamentos.open("GET", "https://crudnervion.azurewebsites.net/api/departamentos");
 
     //punto 4
-    miLlamadaPersonas.onreadystatechange = function () {
+    requestDepartamentos.onreadystatechange = function(){
 
-        alert(miLlamadaPersonas.readyState);
-        if (miLlamadaPersonas.readyState < 4) {
-
-            divState.innerHTML = "Pidendo datos...";
-
-        } else if (miLlamadaPersonas.readyState == 4 && miLlamadaPersonas.status == 200) {
-
-            var pedirResultado = JSON.parse(miLlamadaPersonas.responseText);
-            //var pedirResultadoDepartamentos = JSON.parse(miLlamadaDepartamentos.responseText);
-            
-            rellenarTablaPersonas(pedirResultado/*, pedirResultadoDepartamentos*/);
-            divState.innerHTML = "";
+        alert(requestDepartamentos.readyState)
+        if(requestDepartamentos.readyState < 4){
+            divMensaje.innerHTML = "Cargando..."
+        }else if(requestDepartamentos.readyState == 4 && requestDepartamentos.status == 200){
+            divMensaje.innerHTML = "";
+            listaDepartamentos = JSON.parse(requestDepartamentos.responseText);
+            rellenarTablaPersonas();
         }
     };
 
     //punto 5
-    miLlamadaPersonas.send();
-   //miLlamadaDepartamentos.send();
+    requestDepartamentos.send();
 }
+
+function rellenarTablaPersonas(){
+
+    //punto 1
+    let requestPersonas = new XMLHttpRequest();
+
+    //punto 2
+    requestPersonas.open("GET", "https://crudnervion.azurewebsites.net/api/personas")
+
+    //punto 4
+    requestPersonas.onreadystatechange = function(){
+
+        alert(requestPersonas.readyState)
+        if(requestPersonas.readyState < 4){
+            divMensaje.innerHTML = "Cargando..."
+        }else if(requestPersonas.readyState == 4 && requestPersonas.status == 200){
+            divMensaje.innerHTML = "";
+            
+            let personaConDptm = JSON.parse(requestPersonas.responseText);
+
+            while(){
+                
+            }
+        }
+    };
+
+    //punto 5
+    requestPersonas.send();
+}
+
+

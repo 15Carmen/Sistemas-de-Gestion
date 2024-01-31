@@ -23,7 +23,7 @@ function pedirNombre() {
             divNombre.innerHTML = "Cargando...";
         } else if (miLlamada.readyState == 4 && miLlamada.status == 200) {
             var pedirResultado = JSON.parse(miLlamada.responseText);
-            divNombre.innerHTML = pedirResultado[4].nombre + " " + pedirResultado[4].apellidos;
+            divNombre.innerHTML = pedirResultado[1].nombre + " " + pedirResultado[1].apellidos;
         }
     };
 
