@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {}
+    "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {
+    "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj",
+        "projectUniqueName": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj",
         "projectName": "Entidades",
-        "projectPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\Entidades.csproj",
-        "packagesPath": "C:\\Users\\cmnbo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cmnbo\\GitHub\\Sistemas-de-Gestion\\Tema10_SG\\Entidades\\obj\\",
+        "projectPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\cmartin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\Tema10_SG\\Entidades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cmnbo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\cmartin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
