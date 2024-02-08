@@ -8,6 +8,7 @@ function borrarPersona(){
 
     //punto 1
     var miLlamada = new XMLHttpRequest();
+    
     var divState = document.getElementById("divState");
     var idBorrar = document.getElementById("idBorrar").value;
     var divAlert = document.getElementById("divAlert");

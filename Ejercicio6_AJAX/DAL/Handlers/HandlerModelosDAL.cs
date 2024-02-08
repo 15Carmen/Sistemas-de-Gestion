@@ -24,7 +24,7 @@ namespace DAL.Handlers
                 //abrimos la conexión y la guardamos en una variable.
                 SqlConnection connAbierta = conn.getConnection();
 
-                cmd.CommandText = "UPDATE Modelos set precio=@precio where id=@idModelo";
+                cmd.CommandText = "UPDATE Modelos set precio=@precio where idModelo=@idModelo";
 
                 cmd.Connection = connAbierta;
 

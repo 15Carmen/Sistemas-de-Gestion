@@ -1,9 +1,12 @@
 window.onload = inicializaEvento;
 
-var divMensaje;
-var listaDepartamentos = [];
+//Variables globales
+var divMensaje;                 //div donde se mostrará la tabla de personas
+var listaDepartamentos = [];    //array donde se guardará la lista de departamentos
 
 function inicializaEvento() {
+    // hacemos que para que se muestre la tabla de personas con el nombre de departamento al 
+    // clicar al botón de "Llamada"
   divMensaje = document.getElementById("btnLlamada").onclick = peticionDepartamentos;
 }
 
@@ -56,7 +59,7 @@ function rellenarTablaPersonas(){
             //Mientras haya personas en la lista
             while(personaConDptm.length > 0){
 
-                let persona = personaConDptm.pop();         //sacamos la persona de la lista
+                let persona = personaConDptm.pop();         //sacamos la ultima persona de la lista y la guardamos en persona 
                 let fila = document.createElement("tr");    //creamos la fila
                 let columna = document.createElement("td"); //creamos la columna
                 columna.innerHTML = persona.nombre;         //le metemos el nombre a la columna

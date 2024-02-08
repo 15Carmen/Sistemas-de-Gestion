@@ -14,12 +14,11 @@ namespace API_AJAX.Controllers.API
         [HttpGet]
         public IActionResult Get()
         {
-            IActionResult salida;
-            List<clsMarcas> listaMarcas = new List<clsMarcas>();
+            IActionResult salida;           
 
             try
             {
-                listaMarcas = clsListadoMarcasDAL.getListadoMarcasDAL();
+                List<clsMarcas> listaMarcas = clsListadoMarcasDAL.getListadoMarcasDAL();
                 if (listaMarcas.Count() == 0)
                 {
                     salida = NoContent(); //el listado está vacío.
