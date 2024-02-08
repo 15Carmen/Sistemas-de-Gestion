@@ -4,48 +4,12 @@ var divMensaje;
 var listaDepartamentos = [];
 
 function inicializaEvento() {
-  divMensaje = document.getElementById("btnLlamada");
-  peticionDepartamentos();
+  divMensaje = document.getElementById("btnLlamada").onclick = peticionDepartamentos;
 }
-
-
-/*
-function rellenarTablaPersonas(arrayPersonas, arrayDepartamentos)
-{
-    var tablaPersonas = document.getElementById("tablaPersonas"); //cogemos la tabla
-    var tbody = document.createElement("tbody"); //creamos el cuerpo de la tabla
-
-    for (i = 0; i < arrayPersonas.length; i++) {
-
-        var fila = document.createElement("tr"); //creamos la fila
-
-        var columna = document.createElement("td"); //creamos la columna
-        columna.innerHTML = arrayPersonas[i].nombre;   //le metemos el  a la columna
-        fila.appendChild(columna);  //metemos la columna en la fila
-
-        columna = document.createElement("td");
-        columna.innerHTML = arrayPersonas[i].apellidos;
-        fila.appendChild(columna);
-
-        columna = document.createElement("td");
-        
-        while(arrayPersonas[i].idDepartamento == arrayDepartamentos[i].idDepartamento){
-            columna.innerHTML = arrayDepartamentos[i].nombreDepartamento;
-            fila.appendChild(columna);
-        }
-
-        tbody.appendChild(fila);    //añadimos la fila al body
-        
-    }
-    tablaPersonas.appendChild(tbody);   //añadimos el body a la tabla de personas
-    console.log(tbody);
-}
-*/
 
 function peticionDepartamentos(){
     //punto 1
     let requestDepartamentos = new XMLHttpRequest();
-    let tablaDepartamentos  = document.getElementById("tablaPersonas");
     
     //punto 2
     requestDepartamentos.open("GET", "https://crudnervion.azurewebsites.net/api/departamentos");
@@ -53,12 +17,14 @@ function peticionDepartamentos(){
     //punto 4
     requestDepartamentos.onreadystatechange = function(){
 
-        alert(requestDepartamentos.readyState)
+        //alert(requestDepartamentos.readyState)
         if(requestDepartamentos.readyState < 4){
             divMensaje.innerHTML = "Cargando..."
         }else if(requestDepartamentos.readyState == 4 && requestDepartamentos.status == 200){
             divMensaje.innerHTML = "";
+            //Guardamos la lista de departamentos en un array
             listaDepartamentos = JSON.parse(requestDepartamentos.responseText);
+            //Llamamos a la función que rellena la tabla de personas
             rellenarTablaPersonas();
         }
     };
@@ -78,16 +44,40 @@ function rellenarTablaPersonas(){
     //punto 4
     requestPersonas.onreadystatechange = function(){
 
-        alert(requestPersonas.readyState)
+        //alert(requestPersonas.readyState)
         if(requestPersonas.readyState < 4){
             divMensaje.innerHTML = "Cargando..."
         }else if(requestPersonas.readyState == 4 && requestPersonas.status == 200){
             divMensaje.innerHTML = "";
             
-            let personaConDptm = JSON.parse(requestPersonas.responseText);
+            //Creamos la tabla de personas con nombre de departamentos
+            let personaConDptm = JSON.parse(requestPersonas.responseText); 
 
-            while(){
-                
+            //Mientras haya personas en la lista
+            while(personaConDptm.length > 0){
+
+                let persona = personaConDptm.pop();         //sacamos la persona de la lista
+                let fila = document.createElement("tr");    //creamos la fila
+                let columna = document.createElement("td"); //creamos la columna
+                columna.innerHTML = persona.nombre;         //le metemos el nombre a la columna
+                fila.appendChild(columna);                  //metemos la columna en la fila
+
+                columna = document.createElement("td");     //creamos una nueva columna
+                columna.innerHTML = persona.apellidos;      //le metemos los apellidos a la columna
+                fila.appendChild(columna);                  //metemos la columna en la fila
+
+                columna = document.createElement("td");     //creamos una nueva columna
+               
+                //Buscamos el nombre de departamento que le corresponde a la persona
+                for(i = 0; i < listaDepartamentos.length; i++){
+                    if(persona.idDepartamento == listaDepartamentos[i].id){
+                        columna.innerHTML = listaDepartamentos[i].nombre;   //le metemos el nombre del departamento a la columna
+                    }
+                }
+
+                fila.appendChild(columna);                 //metemos la columna en la fila
+
+                tabla.appendChild(fila);                    //añadimos la fila a la tabla de personas
             }
         }
     };
