@@ -1,36 +1,20 @@
-/**
- * Vamos a realizar un ejercicio en el que debemos crear una BBDD, una API y una página que mediante AJAX se conecta a esa API.
-
-Crear dos tablas en vuestro servidor SQL en Azure:
-marcas (id (PK), nombre) 
-modelos(id (pk), idMarca, nombre, precio)
-
-Crear la API que con los Controllers y Actions que consideréis necesarios para realizar la página
-
-Crear una página que permita modificar los precios de los modelos que pertenezcan a una marca seleccionada.
-Lo primero que debe hacer el usuario es seleccionar una marca de coches.
-Cuando seleccione una marca, aparecerá un listado de todos los modelos de esa marca con un texbox al lado de cada registro.
-En ese textbox aparecerá el precio del coche, y el usuario podrá modificarlo.
-El botón “Guardar” guardará las modificaciones hechas en los precios de los modelos. Si un modelo no ha sufrido cambios en su precio, no debe mandarse a guardar.
- */
-
-//Para crear la página que permita modificar los precios de los modelos que pertenezcan a una marca seleccionada, necesitamos realizar los siguientes pasos:
-//Lo primero que debe hacer el usuario es seleccionar una marca de coches.
-//Cuando seleccione una marca, aparecerá un listado de todos los modelos de esa marca con un texbox al lado de cada registro.
-//En ese textbox aparecerá el precio del coche, y el usuario podrá modificarlo.
-//El botón “Guardar” guardará las modificaciones hechas en los precios de los modelos. Si un modelo no ha sufrido cambios en su precio, no debe mandarse a guardar.
-
 // Función que se ejecuta al cargar la página
 window.onload = inicializaEvento;
 
-var listaMarcas = []; //array donde se guardará la lista de marcas
-var divMarca;      //div donde se mostrará la lista de modelos
+var listaMarcas = document.getElementById("marcaSelect"); //array donde se guardará la lista de marcas
+var btnGuardar = document.getElementById("btnGuardar");   //botón de guardar
+var divMarca = document.getElementById("divMarca");      //div donde se mostrará la lista de marcas
 
 function inicializaEvento() {
-    divMarca = document.getElementById("btnGuardar");
-
+    pedirMarcas();
+    listaMarcas.addEventListener("change", muestraModelos, false);
+    btnGuardar.addEventListener("click", cambiarPrecio, false);
 }
 
+/**
+ * Función que muestra las diferentes marcas de coches que hay en la api
+ * en un select
+ */
 function pedirMarcas() {
 
     //punto 1
@@ -47,31 +31,23 @@ function pedirMarcas() {
         } else if (requestMarcas.readyState == 4 && requestMarcas.status == 200) {
             divMarca.innerHTML = "";
 
-            //Guardamos la lista de marcas en un array
-            listaMarcas = JSON.parse(requestMarcas.responseText);
+            //Guardamos el json en una variable auxiliar
+            let datos = JSON.parse(requestMarcas.responseText);
             
-            //Generamos el select con las marcas
-            let select = document.createElement('selectMarca');
+            let select = document.createElement('option');
             select.value = null;
             select.text = "Selecciona una marca";
-            listaMarcas.appendChild(select);
-
-            //Recorremos el array de marcas
-            for (let i = 0; i < listaMarcas.length; i++) {
+            listaMarcas.appendChild(select);    
+            
+            //Recorremos los dotos
+            for (let i = 0; i < datos.length; i++) {
                 
-                marcaSelect = listaMarcas[i];
-                let option = document.createElement("option");
-                option.value = marcaSelect.id;
-                option.text = marcaSelect.nombre;
-                listaMarcas.appendChild(option);
+                let marca = datos[i];
+                let newOption = document.createElement("option");
+                newOption.value = marca.idMarca;
+                newOption.text = marca.nombre;
+                listaMarcas.appendChild(newOption);
             }
-
-            //Creamos el botón de mostrar modelos
-            let button = document.createElement("button");
-            button.innerHTML = "Mostrar modelos";
-            button.id = "btnModelos";
-            divListas.appendChild(button);
-            button.addEventListener("click", muestraModelos, false);
 
         }
     };
@@ -80,7 +56,14 @@ function pedirMarcas() {
     requestMarcas.send();
 }
 
+/**
+ * Función que mustra los modelos de la marca seleccionada anteriormente
+ */
 function muestraModelos() {
+
+    //Guardamos el id de la marca seleccionada
+    let idMarca = listaMarcas.options[listaMarcas.selectedIndex].value;
+
     //punto 1
     let requestModelos = new XMLHttpRequest();
 
@@ -94,14 +77,49 @@ function muestraModelos() {
             divMarca.innerHTML = "Cargando..."
         } else if (requestModelos.readyState == 4 && requestModelos.status == 200) {
             divMarca.innerHTML = "";
+
             //Guardamos la lista de modelos en un array
-            listaModelos = JSON.parse(requestModelos.responseText);
-            
+            let listaModelos = JSON.parse(requestModelos.responseText);
+
+            var titulo = document.createElement("h3");
+            titulo.textContent = "Modelos de la marca seleccionada:";
+            document.body.appendChild(titulo);
+
+            //Recorremos los modelos
+            for (let i = 0; i < listaModelos.length; i++) {
+
+                //Guardamos el modelo en una variable auxiliar
+                let modelo = listaModelos[i];
+
+                //Si el id de la marca seleccionada coincide con el id de la marca del modelo
+                if (modelo.idMarca == idMarca) {
+                    
+                    var nombreModelo = document.createElement("label");
+                    var precioModelo = document.createElement("input");
+
+                    var br = document.createElement("br");
+                    
+                    document.body.appendChild(nombreModelo );
+                    document.body.appendChild(precioModelo);
+                    document.body.appendChild(br);
+
+                    nombreModelo.textContent = modelo.nombre;
+                    precioModelo.value = modelo.precio;
+                }
+
+            }
         }
     };
 
     //punto 5
     requestModelos.send();
+}
+
+/**
+ * Función que guarda el nuevo precio del modelo en la api
+ */
+function cambiarPrecio(){
+
 }
 
 
