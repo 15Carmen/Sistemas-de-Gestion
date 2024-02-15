@@ -2,8 +2,10 @@
 window.onload = inicializaEvento;
 
 var listaMarcas = document.getElementById("marcaSelect"); //array donde se guardará la lista de marcas
+var listaModelosMarca = [];                               //array donde se guardará la lista de modelos
 var btnGuardar = document.getElementById("btnGuardar");   //botón de guardar
-var divMarca = document.getElementById("divMarca");      //div donde se mostrará la lista de marcas
+var divMarca = document.getElementById("divMarca");       //div donde se mostrará la lista de marcas
+var divModelo = document.getElementById("divModelo");     //div donde se mostrará la lista de modelos
 
 function inicializaEvento() {
     pedirMarcas();
@@ -67,44 +69,49 @@ function muestraModelos() {
     //punto 1
     let requestModelos = new XMLHttpRequest();
 
-    //punto 2
-    requestModelos.open("GET", "https://apiajax.azurewebsites.net/api/modelos");
+    //punto 2. Conseguimos los modelos de la marca seleccionada
+    requestModelos.open("GET", "https://apiajax.azurewebsites.net/api/modelos/byMarca/" + idMarca);
 
     //punto 4
     requestModelos.onreadystatechange = function () {
 
         if (requestModelos.readyState < 4) {
-            divMarca.innerHTML = "Cargando..."
+            divModelo.innerHTML = "Cargando..."
         } else if (requestModelos.readyState == 4 && requestModelos.status == 200) {
-            divMarca.innerHTML = "";
+            divModelo.innerHTML = "";
 
             //Guardamos la lista de modelos en un array
-            let listaModelos = JSON.parse(requestModelos.responseText);
+            let listaModelosPorMarca = JSON.parse(requestModelos.responseText);
 
             var titulo = document.createElement("h3");
             titulo.textContent = "Modelos de la marca seleccionada:";
-            document.body.appendChild(titulo);
+            divModelo.appendChild(titulo);
 
             //Recorremos los modelos
-            for (let i = 0; i < listaModelos.length; i++) {
+            for (let i = 0; i < listaModelosPorMarca.length; i++) {
 
                 //Guardamos el modelo en una variable auxiliar
-                let modelo = listaModelos[i];
+                let modelo = listaModelosPorMarca[i];
 
                 //Si el id de la marca seleccionada coincide con el id de la marca del modelo
                 if (modelo.idMarca == idMarca) {
                     
+                    //Creamos las etiquetas que necesitaremos para mostrar los modelos
                     var nombreModelo = document.createElement("label");
                     var precioModelo = document.createElement("input");
-
                     var br = document.createElement("br");
                     
-                    document.body.appendChild(nombreModelo );
-                    document.body.appendChild(precioModelo);
-                    document.body.appendChild(br);
+                    //añadimos las etiquetas al div
+                    divModelo.appendChild(nombreModelo );
+                    divModelo.appendChild(precioModelo);
+                    divModelo.appendChild(br);
 
+                    //Añadimos los valores a las etiquetas
                     nombreModelo.textContent = modelo.nombre;
                     precioModelo.value = modelo.precio;
+                
+                    //Añadimos el modelo al array de modelos
+                    listaModelosMarca.push(modelo);
                 }
 
             }
@@ -119,6 +126,45 @@ function muestraModelos() {
  * Función que guarda el nuevo precio del modelo en la api
  */
 function cambiarPrecio(){
+
+   //Recorremos la lista de modelos
+   for(let i = 0; i < listaModelosMarca.length; i++){
+
+       //Guardamos el modelo en una variable auxiliar
+       let modeloActualizado = listaModelosMarca[i];
+
+       //Guardamos el precio que ha introducido el usuario
+       let precioActualizado = document.getElementsByTagName("input")[i].value
+
+       //Si el precio introducido es diferente al precio actual
+        if(modeloActualizado.precio != precioActualizado){
+            //Guardamos el precio actualizado
+            modeloActualizado.precio = precioActualizado;
+        }
+       
+
+       //punto 1
+       let requestPrecio = new XMLHttpRequest();
+
+       //punto 2
+       requestPrecio.open("PUT", "https://apiajax.azurewebsites.net/api/modelos/" + modeloActualizado.idModelo);
+
+       //punto 3
+       requestPrecio.setRequestHeader("Content-Type", "application/json");
+
+       //punto 4
+       requestPrecio.onreadystatechange = function () {
+
+           if (requestPrecio.readyState < 4) {
+               divModelo.innerHTML = "Cargando..."
+           } else if (requestPrecio.readyState == 4 && requestPrecio.status == 200) {
+               divModelo.innerHTML = "Precio actualizado";
+           }
+       };
+
+       //punto 5
+       requestPrecio.send(JSON.stringify(modeloActualizado));
+   }
 
 }
 

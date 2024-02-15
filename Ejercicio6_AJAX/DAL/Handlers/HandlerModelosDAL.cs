@@ -1,4 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Entidades;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +10,15 @@ namespace DAL.Handlers
 {
     public class HandlerModelosDAL
     {
-        public static int updatePrecioModeloDAL(int idModelo, int precio)
+        public static int updatePrecioModeloDAL(clsModelos modelo)
         {
             int numeroFilasAfectadas = 0;
             clsConnection conn = new clsConnection();
             SqlCommand cmd = new SqlCommand();
 
             //Añadimos los parámetros que nos hacen falta. 
-            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = idModelo;
-            cmd.Parameters.Add("@precio", System.Data.SqlDbType.Int).Value = precio;
+            cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = modelo.IdModelo;
+            cmd.Parameters.Add("@precio", System.Data.SqlDbType.Int).Value = modelo.Precio;
 
             try
             {

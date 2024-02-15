@@ -7,11 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace API_AJAX.Controllers.API
 {
     
-    [Route("api/[controller]")]
+    [Route("api/[controller]/")]
     [ApiController]
     public class ModelosController : ControllerBase
     {
-        // GET: api/<MarcasController>
+        // GET: api/<ModelosController>
         [HttpGet]
         public IActionResult Get()
         {
@@ -39,15 +39,37 @@ namespace API_AJAX.Controllers.API
 
         }
 
+        // GET: api/<ModelosController>/idMarca
+        [Route("byMarca/{idMarca}")]
+        [HttpGet]
+        public IActionResult Get(int idMarca)
+        {
+            IActionResult salida;
+
+            List<clsModelos> listaModelosMarca = clsListadoModelosDAL.getListadoModelosPorMarcaDAL(idMarca);
+            
+            if (listaModelosMarca.Count() == 0)
+            {
+                salida = NoContent(); //el listado está vacío.
+            }
+            else
+            {
+                salida = Ok(listaModelosMarca); //mandamos la lista
+            }
+
+            return salida;
+
+        }
+
         // PUT: ModelosController/Edit/5
         [HttpPut]
-        public IActionResult Put(int idModelo, int precio)
+        public IActionResult Put(clsModelos modelo)
         {
             IActionResult salida;
 
             try
             {
-                int numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(idModelo, precio);
+                int numFilasAfectadas = HandlerModelosDAL.updatePrecioModeloDAL(modelo);
 
                 if (numFilasAfectadas == 0)
                 {

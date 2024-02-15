@@ -54,5 +54,51 @@ namespace DAL.Listados
             return listadoModelos;
 
         }
+
+        public static List<clsModelos> getListadoModelosPorMarcaDAL(int id)
+        {
+            clsConnection conexion = new clsConnection();
+            List<clsModelos> listadoModelos = new List<clsModelos>();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader reader;
+
+            try
+            {
+                //abrimos la conexion y la guardamos en una variable
+                SqlConnection conexionAbierta = conexion.getConnection();
+
+                cmd.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
+                cmd.CommandText = "Select * from modelos where idMarca = @id";
+                cmd.Connection = conexionAbierta;
+
+                reader = cmd.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        clsModelos oModelo = new clsModelos();
+                        oModelo.IdModelo = (int)reader["id"];
+                        oModelo.IdMarca = (int)reader["idMarca"];
+                        oModelo.Nombre = (string)reader["nombre"];
+                        oModelo.Precio = (int)reader["precio"];
+
+
+                        listadoModelos.Add(oModelo);
+
+                    }
+                }
+                reader.Close();
+                conexionAbierta.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+
+            return listadoModelos;
+
+        }
     }
 }
