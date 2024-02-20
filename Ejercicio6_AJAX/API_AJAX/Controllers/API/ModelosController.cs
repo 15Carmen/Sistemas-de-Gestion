@@ -62,6 +62,7 @@ namespace API_AJAX.Controllers.API
         }
 
         // PUT: ModelosController/Edit/5
+        [Route("byMarca/Edit/{idModelo}")]
         [HttpPut]
         public IActionResult Put(clsModelos modelo)
         {
