@@ -2,6 +2,7 @@ window.onload = function () {
 
     //Guardamos en una variable la URL de la API de personas
     var urlApi = 'https://crudnervion.azurewebsites.net/api/personas';
+    var urlApiDept = 'https://crudnervion.azurewebsites.net/api/departamentos';
 
     //Llamamos a la función que obtiene los datos de la API
     fetch(urlApi)
@@ -15,12 +16,37 @@ window.onload = function () {
             data.forEach(persona => {
                 //Creamos una fila por cada persona
                 var fila = document.createElement('tr');
-                //Añadimos las columnas a la fila
-                fila.innerHTML = `
-                    <td>${persona.nombre}</td>
-                    <td>${persona.apellidos}</td>                   
-                `;
-                //TODO: Poner el nombre del departamento
+
+                //Creamos celdas para cada dato de la persona
+                var nombreCell = document.createElement('td');
+                var apellidosCell = document.createElement('td');
+
+                nombreCell.textContent = persona.nombre;
+                apellidosCell.textContent = persona.apellidos;
+
+                fila.appendChild(nombreCell);
+                fila.appendChild(apellidosCell);
+
+                var departamentoCell = document.createElement('td');
+                
+                //Buscamos el departamento de la persona
+                fetch(urlApiDept)
+                    .then(responseDept => responseDept.json()) // Convertimos la respuesta a JSON
+                    .then(dataDept => { // Aquí ya tenemos los datos de los departamentos
+                        
+                        var departamento = dataDept.find(departamento => departamento.id == persona.idDepartamento);
+                        
+                        if (departamento) {
+                            departamentoCell.textContent = departamento.nombre; //Asignamos el nombre del departamento
+                        }else{
+                            departamentoCell.textContent = "Departamento no encontrado";
+                        }
+                        
+                    })
+                    .catch(error => console.error('Error al obtener los datos del departamento:', error));
+                
+                    fila.appendChild(departamentoCell); //Añadimos la celda al body de la tabla
+                
                 tbody.appendChild(fila); //Añadimos la fila al body de la tabla
             });
         })
