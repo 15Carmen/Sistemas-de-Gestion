@@ -45,7 +45,7 @@ window.onload = function () {
                     })
                     .catch(error => console.error('Error al obtener los datos del departamento:', error));
                 
-                    fila.appendChild(departamentoCell); //Añadimos la celda al body de la tabla
+                    fila.appendChild
                 
                 tbody.appendChild(fila); //Añadimos la fila al body de la tabla
             });
