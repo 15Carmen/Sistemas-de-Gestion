@@ -97,15 +97,15 @@ img{
   }
 
   /* The Close Button */
-.close {
+.closeInsert {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
+  .closeInsert:hover,
+  .closeInsert:focus {
     color: violet;
     text-decoration: none;
     cursor: pointer;
@@ -117,8 +117,10 @@ img{
     color: white;
   }
   
-  .modal-body {padding: 2px 16px;}
-  
+  .modal-body {
+    padding: 5px 20px;
+
+  }
   .modal-footer {
     padding: 2px 16px;
     background-color: #e8ace5;

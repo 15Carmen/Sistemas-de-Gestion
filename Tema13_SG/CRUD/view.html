@@ -6,9 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script defer src="javascript.js"></script>
-
         <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
         <link rel="stylesheet" type="text/css" href="bonito.css">
 
     </head>
@@ -26,7 +24,6 @@
             <button id="btnInsertar" class="btn">Insertar</button>
 
             <table class="table" id="tablaPersonas">
-                
                 
                 <th>Foto</th>
                 <th>Nombre</th>
@@ -49,27 +46,48 @@
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <span class="close">&times;</span>
+                    <span class="closeInsert">&times;</span>
                     <h3>Insertar Empleado</h3>
                 </div>
 
                 <div class="modal-body">
-                    <p>Foto: </p>
-                    <p>Nombre: </p>
-                    <p>Apellidos: </p>
-                    <p>Fecha de Nacimiento: </p>
-                    <p>Dirección: </p>
-                    <p>Teléfono: </p> 
-                    <p>ID Departmento: </p>
-                    <p>Nombre Departamento: </p>
+                    <label>Foto: </label>
+                    <input id="inputFotoInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Nombre: </label>
+                    <input id="inputNombreInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Apellidos: </label>
+                    <input id="inputApellidosInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Fecha de Nacimiento: </label>
+                    <input id="inputFechaNacInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Dirección: </label>
+                    <input id="inputDireccionInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Teléfono: </label> 
+                    <input id="inputTelefonoInsert" type="text"></input>
+                    <br/>
+                    <br/>
+                    <label>Nombre Departamento: </label>
+                    <select id="selectDepartamentoInsert"></select>
                 </div>
                 
                 <div class="modal-footer">
-                    <button>Guardar</button>
+                    <button id="btnGuardarInsert">Guardar</button>
                 </div>
             </div>
           
-          </div>
+        </div>
+
+          <!-- Modal que aparece cuando se quiere editar una persona -->
+        
 
         <footer>
             <h3 class="despedida">¡Eso es todo amigos!</h3>

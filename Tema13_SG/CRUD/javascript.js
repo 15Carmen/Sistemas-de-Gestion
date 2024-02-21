@@ -1,5 +1,26 @@
 window.onload = comienzo;
 
+class Persona{
+    constructor(id, foto, nombre, apellidos, fechaNac, direccion, telefono, idDepartamento){
+        this.id = id;
+        this.foto = foto;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNac = fechaNac;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.idDepartamento = idDepartamento;
+    }
+}
+
+class Departamento{
+
+    constructor(id, nombre){
+        this.id = id;
+        this.nombre = nombre;
+    }
+}
+
 //Guardamos en una variable la URL de la API de personas
 var urlApi = 'https://crudnervion.azurewebsites.net/api/personas';
 var urlApiDept = 'https://crudnervion.azurewebsites.net/api/departamentos';
@@ -18,9 +39,18 @@ function comienzo() {
     //Si se clickea el botón de agregar, se abre el modal
     btnInasertar.addEventListener("click", AgregarPersona);
 
-    //Si se clickea una fila de la tabla, se selecciona
+    //Si se clickea una fila de la tabla se selecciona
+}
+
+/**
+ * Metodo que selecciona una persona de la tabla y al dejarla seleccionada
+ * cambia el color de la fila y muestra el modal de editar
+ */
+function SeleccionarPersona(){
 
 }
+
+
 
 function ListarPersonas() {
 
@@ -100,17 +130,94 @@ function ListarPersonas() {
 }
 
 function AgregarPersona(){
+
+    //conseguimos la url de la API para insertar personas
+    var urlApiInsert = 'https://crudnervion.azurewebsites.net/api/personas/';
+
     // Conseguimos el modal del HTML
     var modal = document.getElementById("myModal");
 
     // Conseguimos el elemento <span> que cierra el modal
-    var span = document.getElementsByClassName("close")[0];
+    var spanInsert = document.getElementsByClassName("closeInsert")[0];
+
+    //Conseguimos el botón de guardar
+    var btnGuardarInsert = document.getElementById("btnGuardarInsert");
 
     //Cuando se clicka el botón, se abrirá el modal 
     modal.style.display = "block";
 
+    //Creamos los input para cada campo de la persona 
+    var inputFoto = document.getElementById("inputFotoInsert");
+    var inputNombre = document.getElementById("inputNombreInsert");
+    var inputApellidos = document.getElementById("inputApellidosInsert");
+    var inputFechaNac = document.getElementById("inputFechaNacInsert");
+    var inputDireccion = document.getElementById("inputDireccionInsert");
+    var inputTelefono = document.getElementById("inputTelefonoInsert");
+    var selectDepartamento = document.getElementById("selectDepartamentoInsert");
+
+    //Llenamos el select con los departamentos
+    fetch(urlApiDept)
+        .then(responseDept => responseDept.json()) // Convertimos la respuesta a JSON
+        .then(dataDept => { // Aquí ya tenemos los datos de los departamentos
+    
+                // Recorremos el array de datos de los departamentos
+                dataDept.forEach(departamento => {
+    
+                    // Creamos una opción por cada departamento
+                    var option = document.createElement('option');
+                    option.value = departamento.id;
+                    option.textContent = departamento.nombre;
+    
+                    // Añadimos la opción al select
+                    selectDepartamento.appendChild(option);
+                });
+        })
+        .catch(error => console.error('Error al obtener los datos del departamento:', error));
+
+
+    //Cuando se clicka el botón de guardar, se guardará la persona, 
+    // se subirán los datos a la base de datos y se cerrará el modal
+
+    btnGuardarInsert.onclick = function() {
+
+        //Creamos un objeto con los datos de la persona y lo rellenamos con los datos de los input
+        var persona = new Persona(
+            0,
+            inputFoto.value,
+            inputNombre.value,
+            inputApellidos.value,
+            inputFechaNac.value,
+            inputDireccion.value,
+            inputTelefono.value,
+            selectDepartamento.value
+        );
+
+        //Llamamos a la función que sube los datos a la base de datos
+        fetch(urlApiInsert, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(persona)
+        })
+        .then(response => {
+           if(response.ok){
+            
+                // Cerramos el modal
+                modal.style.display = "none";
+                // Recargamos la página para que se actualice la tabla
+                location.reload();
+           }else{
+               alert("Error al insertar la persona");
+           }
+        })        
+        // Si hay algún error, lo mostramos en consola
+        .catch(error => console.error('Error al insertar la persona:', error));
+
+    }
+
     //Cuando se clicka el <span> (x), se cierra el modal
-    span.onclick = function() {
+    spanInsert.onclick = function() {
         modal.style.display = "none";
     }
 
@@ -121,3 +228,4 @@ function AgregarPersona(){
         }
     }
 }
+
