@@ -1,11 +1,18 @@
 body{
     background-color: whitesmoke;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 15px;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.despedida{
+header{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    text-align: center;
+    color: violet;
+}
+
+h3.despedida{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     text-align: center;
     color: violet;
 }
@@ -13,52 +20,122 @@ body{
 button.btn{
     background-color: #f5bff1;
     border: #f5bff1;
-    color: rgb(0, 0, 0);   
-    margin: 2px;
-}
-
-.botones{
-    display: flex;
+    padding: 10px 10px; 
+    margin: 25px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
     justify-content: end; 
 }
 
-h2.titulo{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
-    text-align: center;
-    color: violet;
+#btnInsertar{
+    position: fixed;
+   
 }
 
-thead.cabeceraTabla{
-    text-align: center;
-    background-color: #f5bff1;
+#tablaPersonas{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border-collapse: collapse;
+    
 }
 
-tr{
+#tablaPersonas th{
+    padding-top: 12px;
+    padding-bottom: 12px;
     background-color: #f5bff1;
+    color: white;
+
+}
+
+#tablaPersonas td{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: black;
+    border-bottom: 1px solid #ddd;
 }
 
 tr:hover{
-    background-color:violet;
-    cursor: pointer;
-    
+    background-color: rgb(221, 221, 221);     
 }
 
-#fotoCell{
-    width: 100px;
-    height: 100px;
+img{
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     margin: 0 auto;
     display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
 
-#nombreCell{
-    background-color: #f5bff1;
-}
+/* The Modal (background) */
+.modal {
+    display: none; /* oculto de defecto */
+    position: fixed; /* Se queda quieto */
+    z-index: 1; /* Se coloca encima de la página web*/
+    padding-top: 100px; /* Localización del modal*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* No se puede scrollear */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
 
+  /* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
 
+  /* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: violet;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #e8ace5;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #e8ace5;
+    color: white;
+  }
 
-td{
+  .modal-footer button{
+    background-color: white;
+    border: #f5bff1;
+    border-radius: 10%;
+    padding: 10px 10px; 
+    margin: 25px;
+    color: #eb09dc;
     text-align: center;
-    
-}
+    font-size: 16px;
+  }
+  
+
+
 

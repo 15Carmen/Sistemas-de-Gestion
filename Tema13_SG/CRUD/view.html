@@ -7,9 +7,8 @@
 
         <script defer src="javascript.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>       
         <link rel="stylesheet" type="text/css" href="bonito.css">
 
     </head>
@@ -21,41 +20,59 @@
             <h2 class="titulo">Listado de empleados</h2>
 
         </header>
-        <form id="form1" runat="server">
-            <div class="botones">
+        
+        <div class="container">
 
-                <button id="btnInsertar" class="btn">Insertar</button>
-                <button id="btnActualizar" class="btn" >Actualizar</button>
-                <button id="btnBorrar" class="btn" >Borrar</button>
-                
-            </div>
-            <br/>
+            <button id="btnInsertar" class="btn">Insertar</button>
 
             <table class="table" id="tablaPersonas">
                 
-                <thead class="cabeceraTabla">
-                    <tr>
-                        <th>Foto</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Fecha de Nacimiento</th>
-                        <th>Dirección</th>
-                        <th>Teléfono</th> 
-                        <th>ID Departmento</th>
-                        <th>Nombre Departamento</th>
-                    </tr>
-                </thead>
-
-                <tbody id="filasTabla">
+                
+                <th>Foto</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Dirección</th>
+                <th>Teléfono</th> 
+                <th>ID Departmento</th>
+                <th>Nombre Departamento</th>
                     
-                </tbody>
+                <!-- Aquí se insertarán los datos de la base de datos -->
             </table>
-               
-            
-        </form>
+
+        </div>
+
+        <!-- Modal que aparece cuando se quiere insertar una persona -->
+        <div id="myModal" class="modal">
+
+            <!-- Contenido del modal -->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h3>Insertar Empleado</h3>
+                </div>
+
+                <div class="modal-body">
+                    <p>Foto: </p>
+                    <p>Nombre: </p>
+                    <p>Apellidos: </p>
+                    <p>Fecha de Nacimiento: </p>
+                    <p>Dirección: </p>
+                    <p>Teléfono: </p> 
+                    <p>ID Departmento: </p>
+                    <p>Nombre Departamento: </p>
+                </div>
+                
+                <div class="modal-footer">
+                    <button>Guardar</button>
+                </div>
+            </div>
+          
+          </div>
 
         <footer>
-            <h5 class="despedida">¡Eso es todo amigos!</h5>
+            <h3 class="despedida">¡Eso es todo amigos!</h3>
         </footer>
     </body>
 </html>
