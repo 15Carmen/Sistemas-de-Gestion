@@ -1,5 +1,6 @@
 window.onload = comienzo;
 
+//Creamos las clases Persona y Departamento con sus respectivos constructores
 class Persona{
     constructor(id, foto, nombre, apellidos, fechaNac, direccion, telefono, idDepartamento){
         this.id = id;
@@ -21,12 +22,13 @@ class Departamento{
     }
 }
 
-//Guardamos en una variable la URL de la API de personas
+//Guardamos en una variable la URL de la API de personas y departamentos
 var urlApi = 'https://crudnervion.azurewebsites.net/api/personas';
 var urlApiDept = 'https://crudnervion.azurewebsites.net/api/departamentos';
 
-var btnInasertar = document.getElementById("btnInsertar");
-var persona = document.getElementsByTagName("tr");
+//Guardamos en variables globales los elementos del HTML que vamos a utilizar
+var btnInasertar = document.getElementById("btnInsertar"); //Botón de insertar persona 
+var persona = document.getElementsByTagName("tr");         //Fila de la tabla de personas
 
 /**
  * Funciones que se ejecutan al cargar la página
@@ -132,7 +134,7 @@ function ListarPersonas() {
 function AgregarPersona(){
 
     //conseguimos la url de la API para insertar personas
-    var urlApiInsert = 'https://crudnervion.azurewebsites.net/api/personas/';
+    var urlApiInsert = 'https://crudnervion.azurewebsites.net/api/personas';
 
     // Conseguimos el modal del HTML
     var modal = document.getElementById("myModal");
@@ -192,8 +194,10 @@ function AgregarPersona(){
             selectDepartamento.value
         );
 
+        // --> forma de insertar datos en la base de datos con fetch <--
+
         //Llamamos a la función que sube los datos a la base de datos
-        fetch(urlApiInsert, {
+        /* fetch(urlApiInsert, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -212,7 +216,26 @@ function AgregarPersona(){
            }
         })        
         // Si hay algún error, lo mostramos en consola
-        .catch(error => console.error('Error al insertar la persona:', error));
+        .catch(error => console.error('Error al insertar la persona:', error)); */
+
+        // --> forma de insertar datos en la base de datos con XMLHttpRequest <--
+        var request = new XMLHttpRequest();
+        request.open("POST", urlApiInsert);
+        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        var data = JSON.stringify(persona);
+
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                modal.style.display = "none";
+                location.reload();
+            }else{
+                alert("Error al insertar la persona");
+            }
+        }
+
+        request.send(data);
+
 
     }
 
