@@ -73,7 +73,7 @@ img{
 
 /* The Modal (background) */
 .modal {
-    display: none; /* oculto de defecto */
+    display: none; /* oculto por defecto */
     position: fixed; /* Se queda quieto */
     z-index: 1; /* Se coloca encima de la página web*/
     padding-top: 100px; /* Localización del modal*/
