@@ -1,35 +1,116 @@
-/* Estilos para el modal */
+body{
+    background-color: whitesmoke;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    text-align: center;
+    color: violet;
+}
+
+h3.despedida{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    text-align: center;
+    color: violet;
+}
+
+button{
+    background-color: #f5bff1;
+    border: #f5bff1;
+    padding: 5px 5px; 
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    justify-content: end; 
+    cursor: pointer;
+}
+
+#personasTable {
+    margin: 0 auto; 
+    width: 90%; 
+    background-color: white;    
+    border-collapse: collapse;
+    cursor: pointer;
+}
+
+
+#personasTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #f5bff1;
+    color: white;
+}
+
+#personasTable td{
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: black;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover{
+    background-color: rgb(221, 221, 221);     
+    
+}
+
+img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
+    display: none; /* oculto por defecto */
+    position: fixed; /* Se queda quieto */
+    z-index: 1; /* Se coloca encima de la página web*/
+    padding-top: 100px; /* Localización del modal*/
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* No se puede scrollear */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 .modal-content {
+    position: relative;
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+.modal-body {
+    padding: 5px 20px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #e8ace5;
+    color: white;
+}
+
+/* The Close Button */
 .close {
-    color: #aaa;
+    color: grey;
     float: right;
     font-size: 28px;
     font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
+  }
+  
+  .close:hover{
+    color: violet;
     text-decoration: none;
     cursor: pointer;
-}
+  }

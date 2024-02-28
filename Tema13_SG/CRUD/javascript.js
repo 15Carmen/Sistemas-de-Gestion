@@ -44,14 +44,6 @@ function comienzo() {
     //Si se clickea una fila de la tabla se selecciona
 }
 
-/**
- * Metodo que selecciona una persona de la tabla y al dejarla seleccionada
- * cambia el color de la fila y muestra el modal de editar
- */
-function SeleccionarPersona(){
-
-}
-
 
 
 function ListarPersonas() {

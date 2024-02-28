@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.onload = function() {
 
     // Obtener referencias a los elementos del DOM
     const personasTable = document.getElementById('personasTable');
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const urlApiPersonas = 'https://crudnervion.azurewebsites.net/api/personas';
     const urlApiDepartamentos = 'https://crudnervion.azurewebsites.net/api/departamentos';
+
 
     /**
      * Función para mostrar las personas y sus departamentos en la tabla
@@ -87,16 +88,6 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Error al listar las personas:', error));
     }
 
-    // Función para mostrar el modal para insertar una nueva persona
-    insertarPersonaBtn.addEventListener('click', function() {
-        insertarPersonaModal.style.display = "block";
-    });
-
-    // Cerrar el modal cuando se haga clic en la 'X'
-    document.querySelector('.close').addEventListener('click', function() {
-        insertarPersonaModal.style.display = "none";
-    });
-
     // Función para cargar los nombres de los departamentos en los selct departamentos de los formularios
     function cargarNombresDepartamentos() {
         fetch(urlApiDepartamentos)
@@ -118,7 +109,9 @@ document.addEventListener("DOMContentLoaded", function() {
     mostrarPersonasYDepartamentos();
     cargarNombresDepartamentos();
 
-    // Función para mostrar el modal de edición y cargar datos de la persona seleccionada
+    /**
+     * Función para mostrar el modal de edición y cargar datos de la persona seleccionada
+     */
     function mostrarModalEditar(event) {
         //Obtenemos el id de la persona a editar
         const personaId = event.target.getAttribute('data-id');
@@ -135,8 +128,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <input type="hidden" name="id" value="${persona.id}">
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" value="${persona.nombre}" required><br><br>
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido" value="${persona.apellido}" required><br><br>
+                        <label for="apellido">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" value="${persona.apellidos}" required><br><br>
                         <label for="fechaNac">Fecha de Nacimiento:</label>
                         <input type="text" id="fechaNac" name="fechaNac" value="${persona.fechaNac}" required><br><br>
                         <label for="direccion">Dirección:</label>
@@ -144,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <label for="telefono">Teléfono:</label>
                         <input type="text" id="telefono" name="telefono" value="${persona.telefono}" required><br><br>
                         <label for="foto">Foto:</label>
-                        <input type="file" id="foto" name="foto" accept="image/*"><br><br>
+                        <input type="text" id="foto" name="foto" value="${persona.foto}" required><br><br>
                         <label for="departamento">Departamento:</label>
                         <select id="departamento" name="departamento" required>
                             ${departamentos.map(depto => `<option value="${depto.id}" ${depto.id === persona.departamentoId ? 'selected' : ''}>${depto.nombre}</option>`).join('')}
@@ -158,27 +151,44 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Error fetching persona for editing:', error));
     }
 
-    // Manejar el envío del formulario de edición de persona
-    editarPersonaForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const formData = new FormData(editarPersonaForm);
-        const personaId = formData.get('id');
+    /**
+     * Evento para insertar una nueva persona
+     */
+    editarPersonaForm.addEventListener('submit', function() {
+    
+        /**
+         * Guardamos en una variable los nuevos datos del formulario de la persona.
+         * --------------------------------------------------------------
+         * FormData es una interfaz en JavaScript recorre todos los elementos del formulario 
+         * (editarPersonaForm) y recopila los valores de los campos del formulario en un 
+         * objeto clave/valor. 
+         * Cada campo del formulario se representa como un par clave/valor en el objeto FormData,
+         * donde la clave es el atributo name del campo y el valor es el valor del campo.
+         */
+        const datosFormulario = new FormData(editarPersonaForm);
+        //Obtenemos el id de la persona a editar
+        const personaId = datosFormulario.get('id');
+        //Creamos un objeto con los datos de la persona
         const personaEditada = {};
-        formData.forEach((value, key) => {
+
+        //Recorremos los datos del formulario y los guardamos en el objeto personaEditada
+        datosFormulario.forEach((value, key) => {
             personaEditada[key] = value;
         });
+
         fetch(`https://crudnervion.azurewebsites.net/api/personas/${personaId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(personaEditada)
+            body: JSON.stringify(personaEditada) //Enviamos los datos de la persona editada
         })
         .then(response => {
             if (response.ok) {
+                //Si todo ha ido bien se muestra por consola
                 console.log('Persona editada correctamente');
-                editarPersonaModal.style.display = "none";
-                // Refrescar la página para mostrar a la persona editada
+                editarPersonaModal.style.display = "none"; //Se cierra el modal de edición
+                // Refrescamos la página para mostrar a la persona editada
                 mostrarPersonasYDepartamentos();
             } else {
                 console.error('Error al editar persona:', response.statusText);
@@ -186,4 +196,57 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error al editar persona:', error));
     });
-});
+
+    /**
+     * Función para mostrar el modal para insertar una nueva persona
+     */
+     insertarPersonaBtn.addEventListener('click', function() {
+        insertarPersonaModal.style.display = "block";
+    });
+
+    /**
+     * Evento para insertar una nueva persona en la api
+     * --------------------------------------------------------------
+     * 
+     * Da un error 400 que no consigo solucionar, por lo que no se puede insertar una nueva persona.
+     * Agradecería que me dijeras que es lo que falla.
+     */
+    insertarPersonaForm.addEventListener('submit', function(event) {
+
+        event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+
+        // Capturar los datos del formulario utilizando FormData
+        const datosFormulario = new FormData(insertarPersonaForm);
+
+        // Convertir los datos del formulario en un objeto JSON
+        const nuevaPersona = {};
+        datosFormulario.forEach((value, key) => {
+            nuevaPersona[key] = value;
+        });
+
+        // Enviar una solicitud HTTP POST a la API para insertar la nueva persona
+        fetch(urlApiPersonas, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(nuevaPersona)
+        })
+        .then(response => {
+            if (response.ok) {
+                // Si la inserción fue exitosa, cerrar el modal y actualizar la tabla
+                insertarPersonaModal.style.display = "none";
+                mostrarPersonasYDepartamentos();
+            } else {
+                alert('Error al insertar persona');
+            }
+        })
+        .catch(error => console.error('Error al insertar persona:', error));
+    });
+
+    // Cerrar el modal cuando se haga clic en la 'X'
+    document.querySelector('.close').addEventListener('click', function() {
+        editarPersonaModal.style.display = "none";
+        insertarPersonaModal.style.display = "none";
+    });
+}
