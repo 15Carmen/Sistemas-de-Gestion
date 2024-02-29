@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pQAGDRJaJMoRMsGPXQZJedLyfKQX37q8vlRmJzHeIiF2fd8u59+svlA26lugJd5PxzbkZATxbKUzZuBUn0/OEg==",
+  "dgSpecHash": "ytIgRRA4L9LV2HMYj2X7pcY2nVYB/X/3pneRoHmLi70mH9cPu/7SecmSzpSnUEqfVBaDtE9897Cnz+tF6Kmkkg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cmartin\\Desktop\\API\\ExDI\\BL\\BL.csproj",
+  "projectFilePath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\API\\ExDI\\BL\\BL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

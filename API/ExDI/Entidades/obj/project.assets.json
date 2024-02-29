@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cmartin\\Desktop\\API\\ExDI\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\API\\ExDI\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\cmartin\\Desktop\\API\\ExDI\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\API\\ExDI\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\cmartin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cmartin\\Desktop\\API\\ExDI\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\cmartin\\GitHub\\Sistemas de Gestion\\API\\ExDI\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
