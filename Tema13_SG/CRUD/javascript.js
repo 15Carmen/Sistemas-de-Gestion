@@ -2,14 +2,14 @@ window.onload = comienzo;
 
 //Creamos las clases Persona y Departamento con sus respectivos constructores
 class Persona{
-    constructor(id, foto, nombre, apellidos, fechaNac, direccion, telefono, idDepartamento){
+    constructor(id, nombre, apellidos, fechaNac, direccion, telefono, foto, idDepartamento){
         this.id = id;
-        this.foto = foto;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.fechaNac = fechaNac;
         this.direccion = direccion;
         this.telefono = telefono;
+        this.foto = foto;
         this.idDepartamento = idDepartamento;
     }
 }
@@ -42,14 +42,6 @@ function comienzo() {
     btnInasertar.addEventListener("click", AgregarPersona);
 
     //Si se clickea una fila de la tabla se selecciona
-}
-
-/**
- * Metodo que selecciona una persona de la tabla y al dejarla seleccionada
- * cambia el color de la fila y muestra el modal de editar
- */
-function SeleccionarPersona(){
-
 }
 
 
@@ -131,10 +123,11 @@ function ListarPersonas() {
 
 }
 
+//Hay problemas para insertar personas, da un error 400 al hacer el POST
 function AgregarPersona(){
 
     //conseguimos la url de la API para insertar personas
-    var urlApiInsert = 'https://crudnervion.azurewebsites.net/api/personas';
+    var urlApiInsert = 'https://crudnervion.azurewebsites.net/api/personas/';
 
     // Conseguimos el modal del HTML
     var modal = document.getElementById("myModal");
@@ -180,24 +173,28 @@ function AgregarPersona(){
     //Cuando se clicka el botón de guardar, se guardará la persona, 
     // se subirán los datos a la base de datos y se cerrará el modal
 
+    var id = 0;
+    
     btnGuardarInsert.onclick = function() {
 
+        
         //Creamos un objeto con los datos de la persona y lo rellenamos con los datos de los input
         var persona = new Persona(
-            0,
-            inputFoto.value,
+            id,
             inputNombre.value,
             inputApellidos.value,
             inputFechaNac.value,
             inputDireccion.value,
             inputTelefono.value,
+            inputFoto.value,
             selectDepartamento.value
         );
+        id++;
 
         // --> forma de insertar datos en la base de datos con fetch <--
 
         //Llamamos a la función que sube los datos a la base de datos
-        /* fetch(urlApiInsert, {
+       /*  fetch(urlApiInsert, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -216,17 +213,17 @@ function AgregarPersona(){
            }
         })        
         // Si hay algún error, lo mostramos en consola
-        .catch(error => console.error('Error al insertar la persona:', error)); */
+        .catch(error => console.error('Error al insertar la persona:', error));  */
 
         // --> forma de insertar datos en la base de datos con XMLHttpRequest <--
-        var request = new XMLHttpRequest();
-        request.open("POST", urlApiInsert);
-        request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+         var postRequest = new XMLHttpRequest();
+        postRequest.open("POST", urlApiInsert);
+        postRequest.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
         var data = JSON.stringify(persona);
 
-        request.onreadystatechange = function () {
-            if (request.readyState == 4 && request.status == 200) {
+        postRequest.onreadystatechange = function () {
+            if (postRequest.readyState == 4 && postRequest.status == 200) {
                 modal.style.display = "none";
                 location.reload();
             }else{
@@ -234,8 +231,8 @@ function AgregarPersona(){
             }
         }
 
-        request.send(data);
-
+        postRequest.send(data);
+ 
 
     }
 
@@ -250,5 +247,26 @@ function AgregarPersona(){
             modal.style.display = "none";
         }
     }
+}
+
+function EditarPersona(oPersona){
+
+    modal.style.display = "block";
+
+    inputNombre.value = oPersona.nombre;
+    inputApellidos.value = oPersona.apellidos;
+    inputFechaNac.value = oPersona.fechaNac;
+    inputDireccion.value = oPersona.direccion;
+    inputTelefono.value = oPersona.telefono;
+    inputFoto.value = oPersona.foto;
+    selectDepartamento.value = oPersona.idDepartamento;
+    selectDepartamento.text = oPersona.nombreDepartamento;
+
+    forEach(departamento => {
+        
+    })
+    
+   
+
 }
 

@@ -17,39 +17,35 @@ h3.despedida{
     color: violet;
 }
 
-button.btn{
+button{
     background-color: #f5bff1;
     border: #f5bff1;
-    padding: 10px 10px; 
-    margin: 25px;
+    padding: 5px 5px; 
+    margin: 10px;
     color: white;
     text-align: center;
     font-size: 16px;
     justify-content: end; 
+    cursor: pointer;
 }
 
-#btnInsertar{
-    position: fixed;
-   
-}
-
-#tablaPersonas{
-    width: 80%;
-    margin: 0 auto;
-    background-color: white;
+#personasTable {
+    margin: 0 auto; 
+    width: 90%; 
+    background-color: white;    
     border-collapse: collapse;
-    
+    cursor: pointer;
 }
 
-#tablaPersonas th{
+
+#personasTable th {
     padding-top: 12px;
     padding-bottom: 12px;
     background-color: #f5bff1;
     color: white;
-
 }
 
-#tablaPersonas td{
+#personasTable td{
     text-align: center;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -59,6 +55,7 @@ button.btn{
 
 tr:hover{
     background-color: rgb(221, 221, 221);     
+    
 }
 
 img{
@@ -71,7 +68,6 @@ img{
     padding-bottom: 12px;
 }
 
-/* The Modal (background) */
 .modal {
     display: none; /* oculto por defecto */
     position: fixed; /* Se queda quieto */
@@ -83,55 +79,38 @@ img{
     height: 100%; /* Full height */
     overflow: auto; /* No se puede scrollear */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
+}
 
-  /* Modal Content */
 .modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
-    padding: 0;
+    padding: 20px;
     border: 1px solid #888;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  }
+}
 
-  /* The Close Button */
-.closeInsert {
+.modal-body {
+    padding: 5px 20px;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #e8ace5;
     color: white;
+}
+
+/* The Close Button */
+.close {
+    color: grey;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
   
-  .closeInsert:hover,
-  .closeInsert:focus {
+  .close:hover{
     color: violet;
     text-decoration: none;
     cursor: pointer;
   }
-  
-  .modal-body {
-    padding: 5px 20px;
-
-  }
-  .modal-footer {
-    padding: 2px 16px;
-    background-color: #e8ace5;
-    color: white;
-  }
-
-  .modal-footer button{
-    background-color: white;
-    border: #f5bff1;
-    border-radius: 10%;
-    padding: 10px 10px; 
-    margin: 25px;
-    color: #eb09dc;
-    text-align: center;
-    font-size: 16px;
-  }
-  
-
-
-

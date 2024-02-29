@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CrudAjax</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header><h2>Listado de empleados</h2></header>
+
+<button id="insertarPersonaBtn">Insertar Persona</button>
+
+<!-- Modal para insertar persona -->
+<div id="insertarPersonaModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Insertar Persona</h2>
+        <form id="insertarPersonaForm">
+            <input type="hidden" id="id" name="id">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required><br><br>
+            <label for="fechaNac">Fecha de Nacimiento:</label>
+            <input type="text" id="fechaNac" name="fechaNac" required><br><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required><br><br>
+            <label for="foto">Foto:</label>
+            <input type="text" id="foto" name="foto" required><br><br>
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento" required>
+                <!-- Los nombres de los departamentos se insertarán por JavaScript -->
+            </select><br><br>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</div>
+
+<!-- Tabla para mostrar las personas -->
+<table id="personasTable">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Foto</th>
+            <th>Departamento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Personas serán insertadas aquí -->
+    </tbody>
+</table>
+
+<!-- Modal para editar persona -->
+<div id="editarPersonaModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Persona</h2>
+        <form id="editarPersonaForm">
+            <!-- Los campos del formulario se llenarán con JavaScript -->
+        </form>
+    </div>
+</div>
+
+<footer>
+    <h3 class="despedida">¡Eso es todo amigos!</h3>
+</footer>
+
+<script src="newScript.js"></script>
+</body>
+</html>

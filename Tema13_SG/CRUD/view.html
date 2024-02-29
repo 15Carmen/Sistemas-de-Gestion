@@ -25,16 +25,20 @@
 
             <table class="table" id="tablaPersonas">
                 
-                <th>Foto</th>
-                <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Fecha de Nacimiento</th>
-                <th>Dirección</th>
-                <th>Teléfono</th> 
-                <th>ID Departmento</th>
-                <th>Nombre Departamento</th>
+                <thead class="cabecera-tabla">
+                    <th>Foto</th>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th> 
+                    <th>ID Departmento</th>
+                    <th>Nombre Departamento</th>
+                </thead>
+                 <!-- Aquí se insertarán los datos de la api -->
+                <tbody class="body-tabla" id="bodyTabla"></tbody>
                     
-                <!-- Aquí se insertarán los datos de la base de datos -->
+               
             </table>
 
         </div>
@@ -45,42 +49,39 @@
             <!-- Contenido del modal -->
             <div class="modal-content">
 
-                <div class="modal-header">
-                    <span class="closeInsert">&times;</span>
-                    <h3>Insertar Empleado</h3>
-                </div>
-
                 <div class="modal-body">
                     <label>Foto: </label>
-                    <input id="inputFotoInsert" type="text"></input>
+                    <input id="inputFoto" type="text"></input>
                     <br/>
                     <br/>
                     <label>Nombre: </label>
-                    <input id="inputNombreInsert" type="text"></input>
+                    <input id="inputNombre" type="text"></input>
                     <br/>
                     <br/>
                     <label>Apellidos: </label>
-                    <input id="inputApellidosInsert" type="text"></input>
+                    <input id="inputApellidos" type="text"></input>
                     <br/>
                     <br/>
                     <label>Fecha de Nacimiento: </label>
-                    <input id="inputFechaNacInsert" type="text"></input>
+                    <input id="inputFechaNac" type="text"></input>
                     <br/>
                     <br/>
                     <label>Dirección: </label>
-                    <input id="inputDireccionInsert" type="text"></input>
+                    <input id="inputDireccion" type="text"></input>
                     <br/>
                     <br/>
                     <label>Teléfono: </label> 
-                    <input id="inputTelefonoInsert" type="text"></input>
+                    <input id="inputTelefono" type="text"></input>
                     <br/>
                     <br/>
                     <label>Nombre Departamento: </label>
-                    <select id="selectDepartamentoInsert"></select>
+                    <select id="selectDepartamento">
+                        <option id="departamentoSeleccionado"></option>
+                    </select>
                 </div>
                 
                 <div class="modal-footer">
-                    <button id="btnGuardarInsert">Guardar</button>
+                    <button id="btnGuardar">Guardar</button>
                 </div>
             </div>
           
